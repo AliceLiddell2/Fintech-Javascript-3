@@ -158,6 +158,6 @@ module.exports = {
   sum,
   anagram,
   getUnique,
-  //  getIntersection,
+  getIntersection,
   isIsomorphic
 };
