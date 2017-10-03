@@ -31,7 +31,7 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(x) {
+function sum(firstNum) {
   let currentSum;
 
   if (firstNum !== undefined) {
@@ -72,6 +72,7 @@ function anagram(first, second) {
 function getUnique(arr) {
   let k = 0;
   let mass2 = [];
+  let mass = [];
 
   mass = mass.sort(function(a,b){return a-b;});
   mass2[k] = mass[0];
