@@ -64,7 +64,6 @@ function anagram(first, second) {
     return true;
   }
   return false;
-  }
 }
 
 /*= ============================================ */
@@ -79,9 +78,7 @@ function getUnique(mass) {
   let k = 0;
   let mass2 = [];
 
-  mass = mass.sort(function(a, b) {
-    return a - b;
-  });
+  mass = mass.sort(function(a, b) { return a - b; });
   mass2[k] = mass[0];
   for (let i = 1; i < mass.length; i++) {
     if (mass[i] !== mass2[k]) {
