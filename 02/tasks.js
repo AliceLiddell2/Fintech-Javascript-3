@@ -78,17 +78,17 @@ function anagram(first, second) {
  */
 function getUnique(mass) {
   let k = 0;
-  let mass2 = [];
+  let result = [];
 
   mass = mass.sort(function(a, b) { return a - b; });
-  mass2[k] = mass[0];
+  result[k] = mass[0];
   for (let i = 1; i < mass.length; i++) {
-    if (mass[i] !== mass2[k]) {
-      mass2[k + 1] = mass[i];
+    if (mass[i] !== result[k]) {
+      result[k + 1] = mass[i];
       k += 1;
     }
   }
-  return mass2;
+  return result;
 }
 
 /**
@@ -97,9 +97,8 @@ function getUnique(mass) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-
 function getIntersection(first, second) {
-  var intersec = [];
+  let intersec = [];
   
   for (let i = 0; i < first.length; i++) {
     for (let j = 0; j < second.length; j++) {
@@ -108,7 +107,7 @@ function getIntersection(first, second) {
       }
     }
   }
-  intersec = intersec.sort(function(a,b){return a-b;});
+  intersec = intersec.sort(function(a,b) {return a - b; });
   return intersec;
 }
 
