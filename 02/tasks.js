@@ -120,8 +120,7 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
-  let letterL, letterR, countChanges = 0;
-  const letterCheck = {};
+  let letterL, letterR, countChanges = 0, letterCheck = {};
 
   if (left.length !== right.length) {
     return false;
