@@ -18,9 +18,9 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-function customBind(func, context, ...args) {
+//function customBind(func, context, ...args) {
 
-}
+//}
 
 /*= ============================================ */
 
@@ -79,12 +79,12 @@ function getUnique(mass) {
   let k = 0;
   let mass2 = [];
 
-  mass = mass.sort(function(a,b){return a-b;});
+  mass = mass.sort(function(a,b){return a - b;});
   mass2[k] = mass[0];
   for (let i = 1; i < mass.length; i++) {
     if (mass[i] !== mass2[k]) {
-    mass2[k+1] = mass[i];
-    k++;
+      mass2[k + 1] = mass[i];
+      k++;
     }
   }
   return mass2;
@@ -96,9 +96,9 @@ function getUnique(mass) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getIntersection(first, second) {
-  return [];
-}
+//function getIntersection(first, second) {
+//  return [];
+//}
 
 /* ============================================= */
 
@@ -124,7 +124,7 @@ function isIsomorphic(left, right) {
   if (left.length !== right.length) {
     return false;
   }
-  for (let i = 0; i<left.length; i++) {
+  for (let i = 0; i < left.length; i++) {
     letterL = left[i];
     letterR = right[i];
     if (letterCheck[letterL] !== undefined) {
