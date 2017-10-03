@@ -110,6 +110,26 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  let letterL;
+  let letterR;
+  let letterCheck = {};
+
+  if (left.length !== right.length)
+    return false;
+
+  for (let i = 0; i<left.length; i++) {
+    letterL = left[i];
+    letterR = right[i];
+    if (letterCheck[letterL] !== undefined) {
+      if (letterCheck[letterL] !== letterR) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      letterCheck[letterL] = letterR;
+    }
+  }
 
 }
 
