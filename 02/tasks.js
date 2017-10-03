@@ -123,14 +123,12 @@ function isIsomorphic(left, right) {
     if (letterCheck[letterL] !== undefined) {
       if (letterCheck[letterL] !== letterR) {
         return false;
-      } else {
-        return true;
       }
     } else {
       letterCheck[letterL] = letterR;
     }
   }
-
+  return true;
 }
 
 module.exports = {
