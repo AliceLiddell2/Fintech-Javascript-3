@@ -18,9 +18,9 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-//function customBind(func, context, ...args) {
+/*function customBind(func, context, ...args) {
 
-//}
+}*/
 
 /*= ============================================ */
 
@@ -58,8 +58,8 @@ function sum(firstNum) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  first = first.split("").sort().join("");
-  second = second.split("").sort().join("");
+  first = first.split('').sort().join('');
+  second = second.split('').sort().join('');
   if (first === second) {
     return true;
   } else {
@@ -79,7 +79,9 @@ function getUnique(mass) {
   let k = 0;
   let mass2 = [];
 
-  mass = mass.sort(function(a,b){return a - b;});
+  mass = mass.sort(function(a, b) {
+    return a - b;
+  });
   mass2[k] = mass[0];
   for (let i = 1; i < mass.length; i++) {
     if (mass[i] !== mass2[k]) {
@@ -96,9 +98,9 @@ function getUnique(mass) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-//function getIntersection(first, second) {
+/*function getIntersection(first, second) {
 //  return [];
-//}
+}*/
 
 /* ============================================= */
 
@@ -116,10 +118,7 @@ function getUnique(mass) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
-  let letterL;
-  let letterR;
-  let countChanges = 0;
-  let letterCheck = {};
+  let letterL, letterR, countChanges = 0, letterCheck = {};
 
   if (left.length !== right.length) {
     return false;
