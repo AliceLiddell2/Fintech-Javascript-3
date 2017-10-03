@@ -4,8 +4,7 @@
  */
 function timer(logger = console.log) {
   for (let i = 0; i < 10; i++) {
-    logger(i);
-    setTimeout(() => {}, 1000);
+    setTimeout(function(i) { return function() { logger(i); }; }(i), 1000*i);
   }
 }
 
