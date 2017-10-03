@@ -1,5 +1,6 @@
 const expect = require('expect.js');
-const { timer, customBind, sum, anagram, getUnique, getIntersection, isIsomorphic } = require('./tasks');
+//const { timer, customBind, sum, anagram, getUnique, getIntersection, isIsomorphic } = require('./tasks');
+const { timer, sum, anagram, getUnique, isIsomorphic } = require('./tasks');
 
 describe('Lesson 2', () => {
   describe('timer', () => {
@@ -15,41 +16,41 @@ describe('Lesson 2', () => {
     });
   });
 
-  describe('customBind', () => {
-    it('should bind arguments and context - 1', () => {
-      let lastContext = null;
-      let lastParams = null;
-      const context = { test: 'test' };
+//  describe('customBind', () => {
+//    it('should bind arguments and context - 1', () => {
+//      let lastContext = null;
+//      let lastParams = null;
+ //     const context = { test: 'test' };
 
-      function call(...params) {
-        lastContext = this;
-        lastParams = params;
-      }
+ //     function call(...params) {
+  //      lastContext = this;
+ //       lastParams = params;
+ //     }
 
-      let bindedFunc = customBind(call, context, 1, 3);
+  //    let bindedFunc = customBind(call, context, 1, 3);
 
-      bindedFunc(4);
-      expect(lastContext).to.eql(context);
-      expect(lastParams).to.eql([1, 3, 4]);
-    });
+   //   bindedFunc(4);
+   //   expect(lastContext).to.eql(context);
+   //   expect(lastParams).to.eql([1, 3, 4]);
+  //  });
 
-    it('should bind arguments and context - 2', () => {
-      let lastContext = null;
-      let lastParams = null;
-      const context = {};
+ //   it('should bind arguments and context - 2', () => {
+ //     let lastContext = null;
+ //     let lastParams = null;
+  //    const context = {};
 
-      function call(...params) {
-        lastContext = this;
-        lastParams = params;
-      }
+  //    function call(...params) {
+  //      lastContext = this;
+   //     lastParams = params;
+   //   }
 
-      let bindedFunc = customBind(call, context, 'hello', 'work');
+ //     let bindedFunc = customBind(call, context, 'hello', 'work');
 
-      bindedFunc(777);
-      expect(lastContext).to.be(context);
-      expect(lastParams).to.eql(['hello', 'work', 777]);
-    });
-  });
+  //    bindedFunc(777);
+  //    expect(lastContext).to.be(context);
+ //     expect(lastParams).to.eql(['hello', 'work', 777]);
+//    });
+//  });
 
   describe('sum', () => {
     it('should compute sum', () => {
@@ -73,12 +74,12 @@ describe('Lesson 2', () => {
     });
   });
 
-  describe('getIntersection', () => {
-    it('should return sorted intersection of arrays', () => {
-      expect(getIntersection([1, 5, 7, 9, 3,], [1, 2, 3, 4])).to.eql([1, 3]);
-      expect(getIntersection([1, 9, 10, 3, 5, 7], [10, 3, 4])).to.eql([3, 10]);
-    });
-  });
+//  describe('getIntersection', () => {
+ //   it('should return sorted intersection of arrays', () => {
+ //     expect(getIntersection([1, 5, 7, 9, 3,], [1, 2, 3, 4])).to.eql([1, 3]);
+ //     expect(getIntersection([1, 9, 10, 3, 5, 7], [10, 3, 4])).to.eql([3, 10]);
+//    });
+//  });
 
   describe('isIsomorphic', () => {
     it('should check if only one char is different', () => {
