@@ -98,11 +98,19 @@ function getUnique(mass) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 
-/**
 function getIntersection(first, second) {
-//  return [];
+  var intersec = [];
+  
+  for (let i = 0; i < first.length; i++) {
+    for (let j = 0; j < second.length; j++) {
+      if (first[i] === second[j]) {
+        intersec.push(first[i]);
+      }
+    }
+  }
+  intersec = intersec.sort(function(a,b){return a-b;});
+  return intersec;
 }
-*/
 
 /* ============================================= */
 
