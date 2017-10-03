@@ -58,7 +58,13 @@ function sum(firstNum) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+  first = first.split("").sort().join("");
+  second = second.split("").sort().join("");
+  if (first === second) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /*= ============================================ */
