@@ -18,10 +18,12 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
+
 /**
 function customBind(func, context, ...args) {
 
-}*/
+}
+*/
 
 /*= ============================================ */
 
@@ -46,7 +48,7 @@ function sum(firstNum) {
       return counter;
     }
     return currentSum;
-  }
+  };
 }
 
 /*= ============================================ */
@@ -95,10 +97,12 @@ function getUnique(mass) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
+
 /**
 function getIntersection(first, second) {
 //  return [];
-}*/
+}
+*/
 
 /* ============================================= */
 
