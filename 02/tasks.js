@@ -147,10 +147,10 @@ function isIsomorphic(left, right) {
 
 module.exports = {
   timer,
-  customBind,
+//  customBind,
   sum,
   anagram,
   getUnique,
-  getIntersection,
+//  getIntersection,
   isIsomorphic
 };
