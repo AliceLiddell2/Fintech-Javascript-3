@@ -112,23 +112,33 @@ function getIntersection(first, second) {
 function isIsomorphic(left, right) {
   let letterL;
   let letterR;
+  let countChanges = 0;
   let letterCheck = {};
 
-  if (left.length !== right.length)
+  if (left.length !== right.length) {
     return false;
-
+  }
   for (let i = 0; i<left.length; i++) {
     letterL = left[i];
     letterR = right[i];
     if (letterCheck[letterL] !== undefined) {
       if (letterCheck[letterL] !== letterR) {
         return false;
+      } else {
+        return true;
       }
     } else {
       letterCheck[letterL] = letterR;
+        if (letterL !== letterCheck[letterL]) {
+          countChanges++;
+        }
     }
   }
-  return true;
+  if (countChanges <= 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = {
