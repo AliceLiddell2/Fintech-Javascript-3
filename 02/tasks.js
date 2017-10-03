@@ -85,7 +85,7 @@ function getUnique(mass) {
   for (let i = 1; i < mass.length; i++) {
     if (mass[i] !== mass2[k]) {
       mass2[k + 1] = mass[i];
-      k++;
+      k += 1;
     }
   }
   return mass2;
@@ -120,7 +120,8 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
-  let letterL, letterR, countChanges = 0, letterCheck = {};
+  let letterL, letterR, countChanges = 0;
+  const letterCheck = {};
 
   if (left.length !== right.length) {
     return false;
@@ -135,7 +136,7 @@ function isIsomorphic(left, right) {
     } else {
       letterCheck[letterL] = letterR;
       if (letterL !== letterCheck[letterL]) {
-        countChanges++;
+        countChanges += 1;
       }
     }
   }
