@@ -18,7 +18,8 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-/*function customBind(func, context, ...args) {
+/**
+function customBind(func, context, ...args) {
 
 }*/
 
@@ -43,9 +44,8 @@ function sum(firstNum) {
     if (secNum !== undefined) {
       currentSum += secNum;
       return counter;
-    } else {
-      return currentSum;
     }
+    return currentSum;
   }
 }
 
@@ -98,7 +98,8 @@ function getUnique(mass) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-/*function getIntersection(first, second) {
+/**
+function getIntersection(first, second) {
 //  return [];
 }*/
 
@@ -132,24 +133,23 @@ function isIsomorphic(left, right) {
       }
     } else {
       letterCheck[letterL] = letterR;
-        if (letterL !== letterCheck[letterL]) {
-          countChanges++;
-        }
+      if (letterL !== letterCheck[letterL]) {
+        countChanges++;
+      }
     }
   }
   if (countChanges <= 1) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 
 module.exports = {
   timer,
-//  customBind,
+  //  customBind,
   sum,
   anagram,
   getUnique,
-//  getIntersection,
+  //  getIntersection,
   isIsomorphic
 };
