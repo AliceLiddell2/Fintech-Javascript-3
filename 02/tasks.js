@@ -62,8 +62,8 @@ function anagram(first, second) {
   second = second.split('').sort().join('');
   if (first === second) {
     return true;
-  } else {
-    return false;
+  }
+  return false;
   }
 }
 
@@ -140,7 +140,7 @@ function isIsomorphic(left, right) {
   }
   if (countChanges <= 1) {
     return true;
-  } 
+  }
   return false;
 }
 
