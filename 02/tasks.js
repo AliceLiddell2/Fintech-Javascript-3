@@ -78,7 +78,7 @@ function anagram(first, second) {
  */
 function getUnique(mass) {
   let k = 0;
-  let result = [];
+  const result = [];
 
   mass = mass.sort(function(a, b) { return a - b; });
   result[k] = mass[0];
