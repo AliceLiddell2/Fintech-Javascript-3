@@ -69,10 +69,9 @@ function anagram(first, second) {
  * @param {Array<number>} исходный массив
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getUnique(arr) {
+function getUnique(mass) {
   let k = 0;
   let mass2 = [];
-  let mass = [];
 
   mass = mass.sort(function(a,b){return a-b;});
   mass2[k] = mass[0];
