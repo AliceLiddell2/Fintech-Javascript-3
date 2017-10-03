@@ -101,7 +101,7 @@ function getIntersection(first, second) {
   let indx = 0;
   let intersec = [];
 
-  for (i = 0; i < second.length; i++) {
+  for (let i = 0; i < second.length; i++) {
     indx = first.indexOf(second[i]);
     if (indx >= 0) {
       intersec.push(second[i]);
