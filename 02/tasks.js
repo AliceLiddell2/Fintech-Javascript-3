@@ -99,7 +99,7 @@ function getUnique(mass) {
  */
 function getIntersection(first, second) {
   let intersec = [];
-  
+
   for (let i = 0; i < first.length; i++) {
     for (let j = 0; j < second.length; j++) {
       if (first[i] === second[j]) {
@@ -107,7 +107,7 @@ function getIntersection(first, second) {
       }
     }
   }
-  intersec = intersec.sort(function(a,b) {return a - b; });
+  intersec = intersec.sort(function(a, b) { return a - b; });
   return intersec;
 }
 
