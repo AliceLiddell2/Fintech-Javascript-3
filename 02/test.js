@@ -1,6 +1,6 @@
 const expect = require('expect.js');
 //const { timer, customBind, sum, anagram, getUnique, getIntersection, isIsomorphic } = require('./tasks');
-const { timer, sum, anagram, getUnique, isIsomorphic } = require('./tasks');
+const { timer, sum, anagram, getUnique, getIntersection, isIsomorphic } = require('./tasks');
 
 describe('Lesson 2', () => {
   describe('timer', () => {
@@ -73,13 +73,13 @@ describe('Lesson 2', () => {
       expect(getUnique([1, 1, 1, 1])).to.eql([1]);
     });
   });
-/*
+
   describe('getIntersection', () => {
     it('should return sorted intersection of arrays', () => {
       expect(getIntersection([1, 5, 7, 9, 3,], [1, 2, 3, 4])).to.eql([1, 3]);
       expect(getIntersection([1, 9, 10, 3, 5, 7], [10, 3, 4])).to.eql([3, 10]);
     });
-  });*/
+  });
 
   describe('isIsomorphic', () => {
     it('should check if only one char is different', () => {
