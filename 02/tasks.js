@@ -72,18 +72,9 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(mass) {
-  let counter = 0;
-  const result = [];
-
-  mass = mass.sort((firstElement, secondElement) => (firstElement - secondElement));
-  result[0] = mass[0];
-  for (let i = 1; i < mass.length; i++) {
-    if (mass[i] !== result[counter]) {
-      result.push(mass[i]);
-      counter += 1;
-    }
-  }
-  return result;
+  let uniqueArray = [...new Set(mass)];
+  
+  return uniqueArray.sort((firstElement, secondElement) => (firstElement - secondElement));
 }
 
 /**
