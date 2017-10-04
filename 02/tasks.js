@@ -106,7 +106,7 @@ function getIntersection(first, second) {
       intersection.push(second[i]);
     }
   }
-  intersection = intersection.sort((firstElement, secondElement) => (firstElement - secondElement));;
+  intersection = intersection.sort((firstElement, secondElement) => (firstElement - secondElement));
   return intersection;
 }
 
@@ -138,7 +138,7 @@ function isIsomorphic(left, right) {
       if (letterCheck[letterL] !== letterR) {
         return false;
       }
-    } 
+    }
     letterCheck[letterL] = letterR;
     if (letterL !== letterCheck[letterL]) {
       countChanges += 1;
