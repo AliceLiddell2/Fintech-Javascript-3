@@ -143,11 +143,10 @@ function isIsomorphic(left, right) {
     if (letterL !== letterCheck[letterL]) {
       countChanges += 1;
     }
+    if (countChanges > 1)
+      return false;
   }
-  if (countChanges <= 1) {
-    return true;
-  }
-  return false;
+  return true;
 }
 
 module.exports = {
