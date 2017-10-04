@@ -72,7 +72,7 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(mass) {
-  let uniqueArray = [...new Set(mass)];
+  const uniqueArray = [...new Set(mass)];
 
   return uniqueArray.sort((firstElement, secondElement) => (firstElement - secondElement));
 }
@@ -87,7 +87,7 @@ function getIntersection(first, second) {
   first = new Set(first);
   second = new Set(second);
 
-  let intersection = new Set([...first].filter(x => second.has(x)));
+  const intersection = new Set([...first].filter(x => second.has(x)));
 
   return Array.from(intersection).sort((firstElement, secondElement) => (firstElement - secondElement));
 }
