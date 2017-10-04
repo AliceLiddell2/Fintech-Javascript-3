@@ -143,8 +143,9 @@ function isIsomorphic(left, right) {
     if (letterL !== letterCheck[letterL]) {
       countChanges += 1;
     }
-    if (countChanges > 1)
+    if (countChanges > 1) {
       return false;
+    }
   }
   return true;
 }
