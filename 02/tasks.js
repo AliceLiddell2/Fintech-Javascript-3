@@ -3,9 +3,8 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (let i = 0; i < 10; i++) {
-    logger(i);
-    setTimeout(() => {}, 1000);
+  for (var i = 1; i <10; i++) {
+    (function(index) {setTimeout( () => { logger(index); }, 100); })(i);
   }
 }
 
