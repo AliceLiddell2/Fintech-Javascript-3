@@ -76,15 +76,15 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(mass) {
-  let k = 0;
+  let counter = 0;
   const result = [];
 
-  mass = mass.sort(function(a, b) { return a - b; });
-  result[k] = mass[0];
+  mass = mass.sort((firstElement, secondElement) => (firstElement - secondElement));
+  result[0] = mass[0];
   for (let i = 1; i < mass.length; i++) {
-    if (mass[i] !== result[k]) {
-      result[k + 1] = mass[i];
-      k += 1;
+    if (mass[i] !== result[counter]) {
+      result[counter + 1] = mass[i];
+      counter += 1;
     }
   }
   return result;
@@ -97,17 +97,17 @@ function getUnique(mass) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  let indx = 0;
-  let intersec = [];
+  let index = 0;
+  let intersection = [];
 
   for (let i = 0; i < second.length; i++) {
-    indx = first.indexOf(second[i]);
-    if (indx >= 0) {
-      intersec.push(second[i]);
+    index = first.indexOf(second[i]);
+    if (index >= 0) {
+      intersection.push(second[i]);
     }
   }
-  intersec = intersec.sort(function(a, b) { return a - b; });
-  return intersec;
+  intersection = intersection.sort((firstElement, secondElement) => (firstElement - secondElement));;
+  return intersection;
 }
 
 /* ============================================= */
@@ -138,11 +138,10 @@ function isIsomorphic(left, right) {
       if (letterCheck[letterL] !== letterR) {
         return false;
       }
-    } else {
-      letterCheck[letterL] = letterR;
-      if (letterL !== letterCheck[letterL]) {
-        countChanges += 1;
-      }
+    } 
+    letterCheck[letterL] = letterR;
+    if (letterL !== letterCheck[letterL]) {
+      countChanges += 1;
     }
   }
   if (countChanges <= 1) {
