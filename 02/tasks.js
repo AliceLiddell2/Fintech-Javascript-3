@@ -84,17 +84,12 @@ function getUnique(mass) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  let index = 0;
-  let intersection = [];
-
-  for (let i = 0; i < second.length; i++) {
-    index = first.indexOf(second[i]);
-    if (index >= 0) {
-      intersection.push(second[i]);
-    }
-  }
-  intersection = intersection.sort((firstElement, secondElement) => (firstElement - secondElement));
-  return intersection;
+   first = new Set(first);
+   second = new Set(second);
+  
+   let intersection = new Set([...first].filter(x => second.has(x)));
+  
+   return Array.from(intersection).sort((firstElement, secondElement) => (firstElement - secondElement));
 }
 
 /* ============================================= */
