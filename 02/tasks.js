@@ -3,7 +3,7 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (var i = 1; i <10; i++) {
+  for (var i = 0; i <10; i++) {
     (function(index) {setTimeout( () => { logger(index); }, 100); })(i);
   }
 }
