@@ -16,7 +16,7 @@ describe('Lesson 2', () => {
     });
   });
 
-/*  describe('customBind', () => {
+  describe('customBind', () => {
     it('should bind arguments and context - 1', () => {
       let lastContext = null;
       let lastParams = null;
@@ -50,7 +50,7 @@ describe('Lesson 2', () => {
       expect(lastContext).to.be(context);
       expect(lastParams).to.eql(['hello', 'work', 777]);
     });
-  });*/
+  });
 
   describe('sum', () => {
     it('should compute sum', () => {
