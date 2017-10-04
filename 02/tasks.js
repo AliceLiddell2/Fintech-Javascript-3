@@ -79,7 +79,7 @@ function getUnique(mass) {
   result[0] = mass[0];
   for (let i = 1; i < mass.length; i++) {
     if (mass[i] !== result[counter]) {
-      result[counter + 1] = mass[i];
+      result.push(mass[i]);
       counter += 1;
     }
   }
