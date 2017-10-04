@@ -60,10 +60,7 @@ function sum(firstNum) {
 function anagram(first, second) {
   first = first.split('').sort().join('');
   second = second.split('').sort().join('');
-  if (first === second) {
-    return true;
-  }
-  return false;
+  return(first === second);
 }
 
 /*= ============================================ */
