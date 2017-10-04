@@ -19,7 +19,7 @@ function timer(logger = console.log) {
  */
 function customBind(func, context, ...args) {
   return function() {
-    var args2 = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+    let args2 = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
     return func.apply(context, [].concat.call(args,args2));
   };
 }
