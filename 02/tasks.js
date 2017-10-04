@@ -4,7 +4,7 @@
  */
 function timer(logger = console.log) {
   for (var i = 0; i < 10; i++) {
-    (function(index) { setTimeout(() => { logger(index);}, 100);})(i);
+    (function(index) { setTimeout(() => { logger(index); }, 100); }(i));
   }
 }
 
