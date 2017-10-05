@@ -32,7 +32,7 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum (firstNum) {
+function sum(firstNum) {
   if (firstNum === undefined) {
     return 0;
   }
