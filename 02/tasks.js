@@ -45,11 +45,11 @@ function sum(firstNum) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  const firstStringCharCounter = {};
-
   if (first.length !== second.length) {
     return false;
   }
+  const firstStringCharCounter = {};
+
   [].forEach.call(first, char => firstStringCharCounter[char] = firstStringCharCounter[char] ? 1 + firstStringCharCounter[char] : 1);
   for (let charSec of second) {
     if (!firstStringCharCounter[charSec]) {
