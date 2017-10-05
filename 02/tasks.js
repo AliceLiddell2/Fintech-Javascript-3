@@ -88,7 +88,7 @@ function getIntersection(first, second) {
 
   [].forEach.call(first, num => firstArrayNumCounter[num] = firstArrayNumCounter[num] ? 1 + firstArrayNumCounter[num] : 1);
   [].forEach.call(second, num => secondArrayNumCounter[num] = secondArrayNumCounter[num] ? 1 + secondArrayNumCounter[num] : 1);
-  for (num of second) {
+  for (let num of second) {
     if (firstArrayNumCounter[num] === secondArrayNumCounter[num]) {
       for (let k = 0; k < firstArrayNumCounter[num]; k++) {
         result[resCounter] = num ;
@@ -96,7 +96,7 @@ function getIntersection(first, second) {
       }
     }
   }
-  return result.sort((first, second) => first - second);;
+  return result.sort((first, second) => first - second);
 }
 
 /* ============================================= */
