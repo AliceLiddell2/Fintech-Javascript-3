@@ -48,15 +48,15 @@ function anagram(first, second) {
   const firstStringCharCounter = {};
   const secStrLength = second.length;
 
-  [].forEach.call(first, char => firstStringCharCounter[char] = firstStringCharCounter[char] ? 1 + firstStringCharCounter[char] : 1);
   if (first.length !== second.length) {
     return false;
   }
-  for (let i = 0; i < secStrLength; i++) {
-    if (!firstStringCharCounter[second[i]]) {
+  [].forEach.call(first, char => firstStringCharCounter[char] = firstStringCharCounter[char] ? 1 + firstStringCharCounter[char] : 1);
+  for (charSec of second) {
+    if (!firstStringCharCounter[charSec]) {
       return false;
     }
-    firstStringCharCounter[second[i]] -= 1;
+    firstStringCharCounter[charSec] -= 1;
   }
   return true;
 }
@@ -72,7 +72,7 @@ function anagram(first, second) {
 function getUnique(mass) {
   const uniqueArray = [...new Set(mass)];
 
-  return uniqueArray.sort((firstElement, secondElement) => (firstElement - secondElement));
+  return uniqueArray.sort((firstElement, secondElement) => firstElement - secondElement);
 }
 
 /**
@@ -87,7 +87,7 @@ function getIntersection(first, second) {
 
   const intersection = new Set([...first].filter(x => second.has(x)));
 
-  return Array.from(intersection).sort((firstElement, secondElement) => (firstElement - secondElement));
+  return Array.from(intersection).sort((firstElement, secondElement) => firstElement - secondElement);
 }
 
 /* ============================================= */
