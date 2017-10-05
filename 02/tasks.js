@@ -81,8 +81,8 @@ function getUnique(mass) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  const firstArrayNumCounter = {};
-  const secondArrayNumCounter = {};
+  const firstArrayNumCounter = [];
+  const secondArrayNumCounter = [];
   let result = [];
   let resCounter = 0;
 
