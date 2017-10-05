@@ -58,18 +58,18 @@ function sum(firstNum) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  let firstStringLetterCounter = {};
-  let secStrLength = second.length;
+  const firstStringCharCounter = {};
+  const secStrLength = second.length;
 
-  [].forEach.call(first, letter => firstStringLetterCounter[letter] = firstStringLetterCounter[letter] ? 1 + firstStringLetterCounter[letter] : 1);
+  [].forEach.call(first, char => firstStringCharCounter[char] = firstStringCharCounter[char] ? 1 + firstStringCharCounter[char] : 1);
   if (first.length !== second.length) {
     return false;
   }
   for (let i = 0; i < secStrLength; i++) {
-    if (!firstStringLetterCounter[second[i]]) {
+    if (!firstStringCharCounter[second[i]]) {
       return false;
     }
-    firstStringLetterCounter[second[i]] -= 1;
+    firstStringCharCounter[second[i]] -= 1;
   }
   return true;
 }
