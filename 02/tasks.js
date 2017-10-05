@@ -105,11 +105,11 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
-  let countChanges = 0;
-
   if (left.length !== right.length) {
     return false;
   }
+  let countChanges = 0;
+
   for (let i = 0; i < left.length; i++) {
     if (left[i] !== right[i]) {
       countChanges += 1;
