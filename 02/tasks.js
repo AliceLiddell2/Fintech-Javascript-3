@@ -32,21 +32,10 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(firstNum) {
-  let currentSum;
-
-  if (firstNum !== undefined) {
-    currentSum = firstNum;
-  } else {
-    return 0;
-  }
-  return function counter(secNum) {
-    if (secNum !== undefined) {
-      currentSum += secNum;
-      return counter;
-    }
-    return currentSum;
-  };
+function sum (firstNum) {
+    if (firstNum === undefined)
+        return 0;
+    return secNum => secNum === undefined ? firstNum : sum(firstNum + secNum);
 }
 
 /*= ============================================ */
