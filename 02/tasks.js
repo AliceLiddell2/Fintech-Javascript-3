@@ -71,7 +71,7 @@ function anagram(first, second) {
 function getUnique(mass) {
   const uniqueArray = [...new Set(mass)];
 
-  return uniqueArray.sort((firstElement, secondElement) => firstElement - secondElement);
+  return uniqueArray.sort((first, second) => first - second);
 }
 
 /**
