@@ -33,9 +33,10 @@ function customBind(func, context, ...args) {
  * sum :: void -> Number
  */
 function sum (firstNum) {
-    if (firstNum === undefined)
-        return 0;
-    return secNum => secNum === undefined ? firstNum : sum(firstNum + secNum);
+  if (firstNum === undefined) {
+    return 0;
+  }
+  return secNum => secNum === undefined ? firstNum : sum(firstNum + secNum);
 }
 
 /*= ============================================ */
