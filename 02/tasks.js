@@ -58,9 +58,20 @@ function sum(firstNum) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  first = first.split('').sort().join('');
-  second = second.split('').sort().join('');
-  return (first === second);
+  let firstStringLetterCounter = {};
+  let secStrLength = second.length;
+  
+  [].forEach.call(first, (letter) => (firstStringLetterCounter[letter] = firstStringLetterCounter[letter] ? 1 + firstStringLetterCounter[letter] : 1));
+  if (first.length !== second.length) {
+    return false;
+  }
+  for (let i = 0; i < secStrLength; i++) {
+    if (!firstStringLetterCounter[second[i]]) {
+      return false;
+    }
+    firstStringLetterCounter[second[i]] -= 1;
+  }
+  return true;
 }
 
 /*= ============================================ */
