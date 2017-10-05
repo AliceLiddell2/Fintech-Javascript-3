@@ -92,7 +92,7 @@ function getIntersection(first, second) {
     if (firstArrayNumCounter[num] === secondArrayNumCounter[num]) {
       for (let k = 0; k < firstArrayNumCounter[num]; k++) {
         result[resCounter] = num;
-        resCounter++;
+        resCounter += 1;
       }
     }
   }
