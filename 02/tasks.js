@@ -81,21 +81,16 @@ function getUnique(mass) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  const firstArrayNumCounter = [];
-  const secondArrayNumCounter = [];
+  let cache = {};
   let result = [];
-  let resCounter = 0;
 
-  [].forEach.call(first, num => firstArrayNumCounter[num] = firstArrayNumCounter[num] ? 1 + firstArrayNumCounter[num] : 1);
-  [].forEach.call(second, num => secondArrayNumCounter[num] = secondArrayNumCounter[num] ? 1 + secondArrayNumCounter[num] : 1);
-  for (let num of second) {
-    if (firstArrayNumCounter[num] === secondArrayNumCounter[num]) {
-      for (let k = 0; k < firstArrayNumCounter[num]; k++) {
-        result[resCounter] = num;
-        resCounter += 1;
-      }
+  first.forEach((element) => cache[element] = 1);
+
+  second.forEach(function(element) {
+    if (cache[element] === 1) {
+      result.push(element);
     }
-  }
+  });
   return result.sort((first, second) => first - second);
 }
 
