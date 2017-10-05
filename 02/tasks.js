@@ -61,9 +61,7 @@ function anagram(first, second) {
   let firstStringLetterCounter = {};
   let secStrLength = second.length;
 
-  [].forEach.call(first, (letter) => 
-                  firstStringLetterCounter[letter] = firstStringLetterCounter[letter] ? 1 + firstStringLetterCounter[letter] : 1
-                 );
+  [].forEach.call(first, (letter) => firstStringLetterCounter[letter] = firstStringLetterCounter[letter] ? 1 + firstStringLetterCounter[letter] : 1);
   if (first.length !== second.length) {
     return false;
   }
