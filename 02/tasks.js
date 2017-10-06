@@ -87,8 +87,7 @@ function getIntersection(first, second) {
   first.forEach(element => cache[element] > 0 ? cache[element] += 1 : cache[element] = 1);
 
   second.forEach(element => {
-    if (cache[element] !== undefined)
-    {
+    if (cache[element] !== undefined) {
       if (cache[element] > 0) {
         result.push(element);
         cache[element] -= 1;
