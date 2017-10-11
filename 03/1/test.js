@@ -1,3 +1,4 @@
+/*
 const expect = require('expect.js');
 const NumberAndString = require('./task.js');
 
@@ -13,3 +14,4 @@ describe('Lesson 3 - task 1', () => {
     expect(resultCharCount).to.eql(20);
   });
 });
+*/
