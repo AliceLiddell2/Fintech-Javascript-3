@@ -5,8 +5,18 @@
  * @return {Promise}
  */
 
-function promiseRace(promises) {
-  return Promise.resolve(null);
+function delay(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
+function promiseRace(promise, time) {
+  return new Promise((resolve, reject) => {
+    promise.then(resolve, reject);
+    delay(time).done(() => {
+      reject(error);
+    });
+  });
 }
 
 module.exports = promiseRace;
