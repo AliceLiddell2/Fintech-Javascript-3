@@ -8,7 +8,10 @@
  * @class NumberAndString
  * @param {String} str - initial value
  */
+
+/*
 class NumberAndString {
 }
 
 module.exports = NumberAndString;
+*/
