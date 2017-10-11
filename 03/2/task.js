@@ -13,16 +13,18 @@ function promiseRace(promises) {
   });
 }
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
-  let timeout = new Promise((resolve, reject) => {
+  let timeout;
+  
+  timeout = new Promise((resolve, reject) => {
     let id = setTimeout(() => {
       clearTimeout(id);
       reject('timeout_error');
-    }, timeoutInMilliseconds)
-  })
+    }, timeoutInMilliseconds);
+  });
   return promiseRace([
     promise,
     timeout
-  ])
+  ]);
 }
 
 module.exports = rejectOnTimeout;
