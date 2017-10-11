@@ -9,15 +9,18 @@
  * @param {String} str - initial value
  */
 
-/*
 class NumberAndString {
   constructor(str) {
-    super(str);
+    this.str = str;
   }
+
+  toString() {
+    return '' + this.str;
+  }
+
   valueOf() {
-    return this.length;
+    return this.str.length;
   }
 }
 
 module.exports = NumberAndString;
-*/
