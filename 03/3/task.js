@@ -6,20 +6,8 @@
  * @return {Promise}
  */
 function promiseAll(promises) {
-  let values = [];
-  let errValue;
-  let acceptedPromises = 0;
   return new Promise((resolve, reject) => {
-  promises.forEach((promise, index) => {
-    promise.then((value) => {
-    values[index] = value;
-    acceptedPromises += 1;
-    if(acceptedPromises === promises.length) {
-      resolve(values);
-    }
-    }).catch((error) => reject(error));
-    });
-  });
+    promises.forEach(promise => promise.then(resolve).catch(error => reject(error)));});
 }
 
 module.exports = promiseAll;
