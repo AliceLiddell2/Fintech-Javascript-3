@@ -10,17 +10,19 @@
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
     promises.forEach((promise) => {
-      promise.then((value) => {
+      promise
+      .then((value) => {
         resolve(value);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         let id = setTimeout(() => {
           clearTimeout(id);
           reject('timeout_error');
-         }, timeoutInMilliseconds);
+        }, timeoutInMilliseconds);
         reject(error);
-            });
-        });
+      });
     });
+  });
 }
 
 module.exports = rejectOnTimeout;
