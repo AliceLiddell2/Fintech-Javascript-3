@@ -11,7 +11,7 @@ function promiseAll(promises) {
 
   return new Promise((resolve, reject) => {
     promises.forEach((promise, index) => {
-      promise.then((value) => {
+      promise.then(value => {
         values[index] = value;
         acceptedPromises += 1;
         if (acceptedPromises === promises.length) {
