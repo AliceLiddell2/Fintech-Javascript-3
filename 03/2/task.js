@@ -9,7 +9,7 @@
 */
 function promiseRace(promises) {
   return new Promise((resolve, reject) => {
-    promises.forEach(promise => promise.then(resolve).catch(error => reject(error)));
+    promises.forEach(promise => promise.then(resolve).catch(reject));
   });
 }
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
