@@ -7,15 +7,24 @@
 * @param {Number} timeoutInMilliseconds время для timeout в миллисекундах
 * @return {Promise} промис с нужным поведением
 */
+function promiseRace(promises) {
+  return new Promise((resolve, reject) => {
+    promises.forEach(promise => promise.then(resolve).catch(error => reject(error)));
+  });
+}
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   let timeout;
 
-  return new Promise((resolve, reject) => {
+  timeout = new Promise((resolve, reject) => {
     let id = setTimeout(() => {
       clearTimeout(id);
       reject('timeout_error');
     }, timeoutInMilliseconds);
   });
+  return promiseRace([
+    promise,
+    timeout
+  ]);
 }
 
 module.exports = rejectOnTimeout;
