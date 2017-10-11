@@ -9,26 +9,17 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
-        let timer = setTimeout(() => {
-            reject('timeout_error');
-        }, timeoutInMilliseconds);
-        let cancelTimer = _ => {
-            if (timer) {
-                clearTimeout(timer);
-                timer = 0;
-            }
-        };
-    
-        promise(
-            value => {
-                cancelTimer();
-                resolve(value);
-            },
-            error => {
-                cancelTimer();
-                reject(error);
-            }
-        );
+    promises.forEach((promise) => {
+      promise.then((value) => {
+        resolve(value);
+      }).catch((error) => {
+        let id = setTimeout(() => {
+          clearTimeout(id);
+          reject('timeout_error');
+         }, timeoutInMilliseconds);
+        reject(error);
+            });
+        });
     });
 }
 
