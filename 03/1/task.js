@@ -10,7 +10,10 @@
  */
 class NumberAndString {
   constructor(str) {
-
+    super(str);
+  }
+  valueOf() {
+    return this.length;
   }
 }
 
