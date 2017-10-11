@@ -13,8 +13,11 @@ function promiseRace(promises) {
   });
 }
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
-  let timeout = new Promise((resolve, reject) => {
-    let id = setTimeout(() => {
+  let timeout = [];
+  let id = [];
+  
+  timeout = new Promise((resolve, reject) => {
+    id = setTimeout(() => {
       clearTimeout(id);
       reject('timeout_error');
     }, timeoutInMilliseconds);
