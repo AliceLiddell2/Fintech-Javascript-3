@@ -9,16 +9,20 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   let timeout;
+  let promises;
 
-  timeout = new Promise((resolve, reject) => {
-    let id = setTimeout(() => {
-      clearTimeout(id);
-      reject('timeout_error');
-    }, timeoutInMilliseconds);
-  });
-  return new Promise((resolve, reject) => {
-    promise.forEach(promise => promise.then(resolve).catch(reject));
-  });
+  try {
+    return new Promise((resolve, reject) => {
+      promise.forEach(promise => promise.then(resolve).catch(reject));
+    });
+  } catch(timeoutInMilliseconds) {
+    timeout = new Promise((resolve, reject) => {
+      let id = setTimeout(() => {
+        clearTimeout(id);
+        reject('timeout_error');
+      }, timeoutInMilliseconds);
+    });
+  }
 }
 
 module.exports = rejectOnTimeout;
