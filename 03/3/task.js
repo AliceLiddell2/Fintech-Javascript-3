@@ -17,7 +17,7 @@ function promiseAll(promises) {
     if(acceptedPromises === promises.length) {
       resolve(values);
     }
-    }).catch((error) => reject(errValue));
+    }).catch((error) => reject(error));
     });
   });
 }
