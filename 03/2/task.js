@@ -12,11 +12,11 @@ function rejectOnTimeout(promise, timeoutInMilliseconds) {
     
   try {
     return promise.forEach();
-  } catch (timeoutInMilliseconds) {
+  } catch (error) {
     return new Promise((resolve, reject) => {
       let id = setTimeout(() => {
         clearTimeout(id);
-        reject('timeout_error');
+        reject(error);
       }, timeoutInMilliseconds);
     });
   }
