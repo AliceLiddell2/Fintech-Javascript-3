@@ -9,7 +9,7 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
-    promises.forEach((promise) => {
+    ((promise) => {
       promise
       .then((value) => {
         resolve(value);
