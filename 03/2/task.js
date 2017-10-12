@@ -33,7 +33,7 @@ function rejectOnTimeout(promise, timeoutInMilliseconds){
                 resolve(res);
             })
             .catch((err) => {
-                clearTimeout(timout);
+                clearTimeout(timeout);
                 reject(err);
             });
     });
