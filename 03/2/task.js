@@ -9,19 +9,15 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
-    ((promise) => {
-      promise
-      .then((value) => {
-        resolve(value);
-      })
-      .catch((error) => {
-        let id = setTimeout(() => {
-          clearTimeout(id);
-          reject('timeout_error');
-        }, timeoutInMilliseconds);
-        reject(error);
-      });
-    });
+    finished = 0,
+    numPromises = promises.length;
+    setTimeout(() => {
+      if (finished < numPromises) {
+        throw ('timeout_error');
+      } else {
+        resolve;
+      }
+    }, timeoutInMilliseconds);
   });
 }
 
