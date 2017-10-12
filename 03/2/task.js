@@ -14,13 +14,13 @@ function rejectOnTimeout(promise, timeoutInMilliseconds) {
     }, timeoutInMilliseconds);
 
     promise
-      .then(res => {
+      .then(result => {
         clearTimeout(timeout);
-        resolve(res);
+        resolve(result);
       })
-      .catch(err => {
+      .catch(error => {
         clearTimeout(timeout);
-        reject(err);
+        reject(error);
       });
   });
 }
