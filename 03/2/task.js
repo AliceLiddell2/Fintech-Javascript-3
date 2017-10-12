@@ -11,7 +11,7 @@ function rejectOnTimeout(promise, timeoutInMilliseconds) {
   let timeout;
 
   timeout = new Promise((resolve, reject) => {
-    let id = setTimeout(() => {
+    setTimeout(() => {
       reject('timeout_error');
     }, timeoutInMilliseconds);
   });
