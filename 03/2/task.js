@@ -14,12 +14,8 @@ function rejectOnTimeout(promise, timeoutInMilliseconds) {
     }, timeoutInMilliseconds);
 
     promise
-      .then(result => {
-        resolve(result);
-      })
-      .catch(error => {
-        reject(error);
-      });
+      .then(resolve)
+      .catch(reject)
   });
 }
 
