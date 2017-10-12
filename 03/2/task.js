@@ -9,7 +9,7 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
+    let timeout = setTimeout(() => {
       reject('timeout_error');
     }, timeoutInMilliseconds);
 
