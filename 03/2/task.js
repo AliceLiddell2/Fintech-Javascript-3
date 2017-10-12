@@ -8,8 +8,8 @@
 * @return {Promise} промис с нужным поведением
 */
 function promiseRace(promises) {
-    return new Promise((resolve, reject) => {
-        promises.forEach(promise => promise.then(resolve).catch(reject));
+  return new Promise((resolve, reject) => {
+    promises.forEach(promise => promise.then(resolve).catch(reject));
 });
 }
 
