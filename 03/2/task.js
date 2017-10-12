@@ -10,16 +10,15 @@
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
     let timeout = setTimeout(() => {
+      clearTimeout(timeout);
       reject('timeout_error');
     }, timeoutInMilliseconds);
 
     promise
       .then(result => {
-        clearTimeout(timeout);
         resolve(result);
       })
       .catch(error => {
-        clearTimeout(timeout);
         reject(error);
       });
   });
