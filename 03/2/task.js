@@ -9,16 +9,32 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
-    finished = 0,
-    numPromises = promises.length;
+        finished = 0,
+        numPromises = promises.length;
+    let onFinish = () => {
+        if (finished < numPromises) {
+            throw ('timeout_error');
+        } else {
+            resolve;
+        }
+        onFinish = null;
+    };
+    for (let i = 0; i < numPromises; i += 1) {
+        promises.then(
+            resolve => {
+            finished += 1;
+            if (finished === numPromises && onFinish) {
+                onFinish();
+            }
+            },reject
+        );
+    }
     setTimeout(() => {
-      if (finished < numPromises) {
-        throw ('timeout_error');
-      } else {
-        resolve;
-      }
+        if (onFinish) {
+            onFinish();
+        }
     }, timeoutInMilliseconds);
-  });
+});
 }
 
 module.exports = rejectOnTimeout;
