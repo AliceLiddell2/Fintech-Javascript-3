@@ -22,7 +22,7 @@ function toDecimal(s) {
 };
 
 let handler = {
-  get: (target, prop) => { return prop in target ? target[prop]; : toDecimal(prop);}
+  get: (target, prop) => { return prop in target ? target[prop] : toDecimal(prop);}
 }
 
 let p = new Proxy(/0./, handler);
