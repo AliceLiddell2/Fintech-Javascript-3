@@ -19,12 +19,12 @@ function toDecimal(s) {
     res[i] = i;
   }
   return res;
-};
+}
 
 let handler = {
   get: (target, prop) => { return prop in target ? target[prop] : toDecimal(prop); }
 };
 
-let p = new Proxy(/0./, handler);
+const p = new Proxy(/0./, handler);
 
 Object.setPrototypeOf(Number.prototype, p);
