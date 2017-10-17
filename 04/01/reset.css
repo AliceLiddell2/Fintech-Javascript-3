@@ -217,10 +217,8 @@ select,
 input,
 textarea { font: 99% sans-serif; }
 
-table {
-  font-size: inherit;
-  font: 100%;
-}
+table { font-size: inherit; }
+table { font: 100%; }
 
 small { font-size: 85%; }
 
@@ -275,12 +273,12 @@ input[type=button] {
 */
 
 /* let's clear some floats */
-.clearfix:before,
-.clearfix:after {
+.clearfix::before,
+.clearfix::after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after { clear: both; }
+.clearfix::after { clear: both; }
 .clearfix { zoom: 1; }
