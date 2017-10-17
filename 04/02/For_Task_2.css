@@ -43,7 +43,7 @@
 }
 
 .tabl1 tr:nth-child(2n+1) {
-  background: #F08080;
+  background: #f08080;
   font-family: 'Lobster', cursive;
 }
 
@@ -58,8 +58,8 @@
 }
 
 .thead {
-  background: #B22222;
-  border-bottom: 5px solid #EE82EE;
+  background: #b22222;
+  border-bottom: 5px solid #ee82ee;
   font-family: 'Lobster', cursive;
   color: white;
   font-size: 28px;
@@ -70,7 +70,7 @@
   width: 50%;
   border-spacing: 8px;
   margin: 0 auto;
-  text-align:center;
+  text-align: center;
 }
 
 .col_ellp {
