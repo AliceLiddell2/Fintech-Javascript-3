@@ -1,35 +1,35 @@
 .col1 {
-  background: #29AB87;
+  background: #29ab87;
   color: black;
   height: 40px;
 }
 
 .col2 {
-  background: #3F888F;
+  background: #3f888f;
   color: black;
   height: 40px;
 }
 
 .col3 {
-  background: #30D5C8;
+  background: #30d5c8;
   color: black;
   height: 40px;
 }
 
 .col4 {
-  background: #AFEEEE;
+  background: #afeeee;
   color: black;
   height: 40px;
 }
 
 .col5 {
-  background: #4285B4;
+  background: #4285b4;
   color: black;
   height: 40px;
 }
 
 .col6 {
-  background: #6495ED;
+  background: #6495ed;
   color: black;
   height: 40px;
 }
@@ -39,7 +39,7 @@
   width: 100%/8;
   border-spacing: 0px;
   margin: 0 auto;
-  text-align:center;
+  text-align: center;
 }
 
 .tabl1 tr:nth-child(2n+1) {
@@ -76,13 +76,13 @@
 .col_ellp {
   white-space: nowrap; /* Запрещаем перенос строк */
   overflow: hidden; /* Обрезаем все, что не помещается в область */
-  max-width: 100px; /* Ширина*/
+  max-width: 100px; /* Ширина */
   height: 50px; /* Высота */
   text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 .col_space {
   white-space: normal;
-  max-width: 100px; /* Ширина*/
-  height: 50px; /* Высота*/
+  max-width: 100px; /* Ширина */
+  height: 50px; /* Высота */
 }
