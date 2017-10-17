@@ -1,11 +1,9 @@
-ol{
-    list-style-type: none;
-    counter-reset: number;
+ol {
+  list-style-type: none;
+  counter-reset: number;
 }
 ol li:before {
-    color: blue;
-    counter-increment: number;
-    content:counter(number) '.';
-//content: counter(item) '. '; /* Добавляем к числам скобку */
-//counter-increment: item; /* Задаём имя счетчика */
+  color: blue;
+  counter-increment: number;
+  content:counter(number) '.';
 }
