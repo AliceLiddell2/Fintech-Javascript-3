@@ -96,7 +96,7 @@ nav,
 section,
 details,
 summary {
-  display: block; 
+  display: block;
 }
 
 /* Handle box-sizing while better addressing child elements:
@@ -106,8 +106,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -144,12 +144,16 @@ ul {
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
-q:before,
-q:after { content: ''; content: none; }
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
 
 a {
   margin: 0;
@@ -170,16 +174,30 @@ dfn[title] {
 }
 
 /* tables still need cellspacing="0" in the markup */
-table { border-collapse: collapse; border-spacing: 0; }
-th { font-weight: bold; vertical-align: bottom; }
-td { font-weight: normal; vertical-align: top; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
 
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
 
 input,
-select {
-  vertical-align: middle;
-}
+select { vertical-align: middle; }
 
 pre {
   white-space: pre; /* CSS2 */
@@ -193,9 +211,14 @@ input[type="checkbox"] { vertical-align: bottom; }
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
 
-select, input, textarea { font: 99% sans-serif; }
+select,
+input,
+textarea { font: 99% sans-serif; }
 
-table { font-size: inherit; font: 100%; }
+table {
+  font-size: inherit;
+  font: 100%;
+}
 
 small { font-size: 85%; }
 
