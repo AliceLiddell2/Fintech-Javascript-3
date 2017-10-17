@@ -3,7 +3,7 @@ ol {
   counter-reset: number;
 }
 
-ol li: before {
+ol li::before {
   color: blue;
   counter-increment: number;
   content:counter(number) '.';
