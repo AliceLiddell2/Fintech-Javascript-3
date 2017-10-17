@@ -6,5 +6,5 @@ ol {
 ol li::before {
   color: blue;
   counter-increment: number;
-  content:counter(number) '.';
+  content: counter(number) '.';
 }
