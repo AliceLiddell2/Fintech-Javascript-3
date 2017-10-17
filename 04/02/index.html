@@ -1,21 +1,48 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Задание 2</title>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="For_Task_2.css">
+    <style>
+        table {table-layout: fixed; width: 100%/8; border-spacing: 8px; margin: 0 auto; text-align:center;}
+    </style>
 </head>
 <body>
 <h1>Пустая страница, в ней создать 2 таблицы. Первая, таблица продуктов(Название продукта, Происхождение, Белки, Жиры, Углеводы):</h1>
-<ul>
-    <li> 5 ячеек в строке равной ширины </li>
-    <li> Если контент не вмещается в ячейку, она не раздвигается, в колонке Название продукта контент в одну строку и скрывается с точками, в колонке Происхождение контент становится многострочным. </li>
-    <li> Фон рядов должен чередоваться </li>
-    <li> По наведению на ряд фон должен меняться </li>
-    <li> Бордеров быть вообще не должно </li>
-    <li> Thead с нижним бордером и цветным фоном </li>
-</ul>
 
-<h1> Вторая, как на картинке, отступ между ячейками 8px</h1>
-<image src="https://habrastorage.org/webt/59/e3/06/59e306153cd88184926845.png"></image>
+
+<table class="tabl1">
+    <caption class="thead">Продукты</caption>
+    <tr class="tbody">
+        <td class="col_space">Название продукта</td> <td class="col_ellp">Происхождение</td> <td>Белки</td> <td>Жиры</td> <td>Углеводы</td>
+    </tr>
+    <tr class="tbody">
+        <td class="col_space">Молоко "Домик в деревне"</td> <td class="col_ellp">Корова</td> <td>45</td> <td>100</td> <td>0.5</td>
+    </tr>
+    <tr class="tbody">
+        <td class="col_space">Яблоко</td> <td class="col_ellp">Дерево</td> <td>100</td> <td>10</td> <td>0.05</td>
+    </tr>
+</table>
+
+<table class="tabl2">
+    <tr>
+        <td class="col1">This</td> <td class="col2">little</td> <td class="col3">piggy</td> <td class="col4">went</td> <td class="col5">to</td> <td class="col6">market</td>
+    </tr>
+    <tr>
+        <td class="col1" colspan=2>This</td> <td class="col2">little</td> <td class="col3">piggy</td> <td class="col4">went</td> <td class="col5">to</td>
+    </tr>
+    <tr>
+        <td class="col1" colspan=4>This</td> <td class="col2" rowspan=3>little</td> <td class="col3">piggy</td>
+    </tr>
+    <tr>
+        <td class="col1" rowspan=2>This</td> <td class="col2">little</td> <td class="col3">piggy</td> <td class="col4">went</td> <td class="col5">to</td>
+    </tr>
+    <tr>
+        <td class="col2">little</td> <td class="col3">piggy</td> <td class="col4">went</td> <td class="col5">to</td>
+    </tr>
+</table>
+
+
 </body>
 </html>
