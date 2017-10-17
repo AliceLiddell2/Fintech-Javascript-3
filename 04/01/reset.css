@@ -147,8 +147,8 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
+blockquote::before,
+blockquote::after,
 q::before,
 q::after {
   content: '';
@@ -178,10 +178,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 th {
   font-weight: bold;
   vertical-align: bottom;
 }
+
 td {
   font-weight: normal;
   vertical-align: top;
@@ -224,7 +226,8 @@ small { font-size: 85%; }
 
 strong { font-weight: bold; }
 
-td, td img { vertical-align: top; }
+td,
+td img { vertical-align: top; }
 
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
 sub,
@@ -251,7 +254,10 @@ input[type=file],
 button { cursor: pointer; }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea { margin: 0; }
+button,
+input,
+select,
+textarea { margin: 0; }
 
 /* make buttons play nice in IE */
 button,
