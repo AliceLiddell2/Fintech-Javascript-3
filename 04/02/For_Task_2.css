@@ -48,8 +48,8 @@
 }
 
 .tabl1 tr:nth-child(2n) {
-    background: crimson;
-    font-family: 'Lobster', cursive;
+  background: crimson;
+  font-family: 'Lobster', cursive;
 }
 
 .tabl1 tbody tr:hover {
