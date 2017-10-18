@@ -19,14 +19,14 @@ h3 {
 .tagline1 {
   font-family: 'Roboto Condensed', cursive;
   font-size: 25px;
-  font-weight:bold;
-  font-style:italic;
+  font-weight: bold;
+  font-style: italic;
 }
 .tagline2 {
   font-family: 'Roboto Condensed', cursive;
   font-size: 15px;
-  font-weight:bold;
-  font-style:italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 p {
@@ -41,12 +41,10 @@ ul {
 
 #wrapper {
   margin-right: auto; /* 1 */
-  margin-left:  auto; /* 1 */
-
+  margin-left: auto; /* 1 */
   max-width: 960px; /* 2 */
-
   padding-right: 10px; /* 3 */
-  padding-left:  10px; /* 3 */
+  padding-left: 10px; /* 3 */
 }
 
 img {
@@ -73,11 +71,12 @@ a:hover {
   padding-top: 25px;
   height: 0;
 }
+
 .videoAndMapWrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
-  border: 0px;
+  border: 0;
   width: 960px;
   height: 540px;
 }
