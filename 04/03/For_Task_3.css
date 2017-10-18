@@ -1,0 +1,18 @@
+li {
+  color: yellow; /* Цвет маркеров */
+}
+
+li span {
+  color: navy; /* Цвет текста */
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: number;
+}
+
+ol li::before {
+  color: blue;
+  counter-increment: number;
+  content: counter(number) '.';
+}
