@@ -1,0 +1,83 @@
+h1 {
+  font-family: 'Roboto', cursive;
+  font-size: 50px;
+  color: blue;
+}
+
+h2 {
+  font-family: 'Roboto', cursive;
+  font-size: 30px;
+  color: red;
+}
+
+h3 {
+  font-family: 'Roboto', cursive;
+  font-size: 20px;
+  color: red;
+}
+
+.tagline1 {
+  font-family: 'Roboto Condensed', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.tagline2 {
+  font-family: 'Roboto Condensed', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+p {
+  font-family: 'Roboto Condensed';
+  color: navy;
+}
+
+ul {
+  font-family: 'Roboto Condensed';
+  color: navy;
+}
+
+#wrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+  max-width: 960px; /* 2 */
+  padding-right: 10px; /* 3 */
+  padding-left: 10px; /* 3 */
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  float: none;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: deeppink;
+}
+
+.videoAndMapWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoAndMapWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 960px;
+  height: 540px;
+}
