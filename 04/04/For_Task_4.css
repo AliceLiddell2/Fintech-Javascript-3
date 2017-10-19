@@ -37,6 +37,12 @@ ul {
   color: navy;
 }
 
+li span {
+  font-family: 'Roboto', cursive;
+  font-size: 25px;
+  color: navy;
+}
+
 #wrapper {
   margin-right: auto; /* 1 */
   margin-left: auto; /* 1 */
