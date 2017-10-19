@@ -2,26 +2,26 @@
 @import url(//fonts.googleapis.com/css?family=Roboto+Condensed);
 
 h1 {
-  font-family: 'Roboto Condensed', cursive;
+  font-family: 'Roboto Condensed';
   font-size: 50px;
   color: blue;
 }
 
 h2 {
-  font-family: 'Roboto Condensed', cursive;
+  font-family: 'Roboto Condensed';
   font-size: 30px;
   color: red;
 }
 
 .tagline1 {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto';
   font-size: 25px;
   font-weight: bold;
   font-style: italic;
 }
 
 .tagline2 {
-  font-family: 'Roboto', cursive;
+  font-family: 'Roboto';
   font-size: 15px;
   font-weight: bold;
   font-style: italic;
