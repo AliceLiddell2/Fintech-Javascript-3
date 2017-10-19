@@ -37,8 +37,8 @@ ul {
   color: navy;
 }
 
-li {
-  font-family: 'Roboto', cursive;
+li span {
+  font-family: 'Roboto';
   font-size: 25px;
   color: navy;
 }
