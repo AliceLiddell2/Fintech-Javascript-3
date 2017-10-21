@@ -1,0 +1,93 @@
+.col1 {
+  background: #29ab87;
+  color: black;
+  height: 40px;
+}
+
+.col2 {
+  background: #3f888f;
+  color: black;
+  height: 40px;
+}
+
+.col3 {
+  background: #30d5c8;
+  color: black;
+  height: 40px;
+}
+
+.col4 {
+  background: #afeeee;
+  color: black;
+  height: 40px;
+}
+
+.col5 {
+  background: #4285b4;
+  color: black;
+  height: 40px;
+}
+
+.col6 {
+  background: #6495ed;
+  color: black;
+  height: 40px;
+}
+
+.tabl1 {
+  table-layout: fixed;
+  width: 100%/8;
+  border-spacing: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+td,
+th {
+  width: 10%;
+}
+
+.tabl1 tr:nth-child(2n+1) {
+  background: #f08080;
+  font-family: 'Lobster', cursive;
+}
+
+.tabl1 tr:nth-child(2n) {
+  background: crimson;
+  font-family: 'Lobster', cursive;
+}
+
+.tabl1 tbody tr:hover {
+  background: black; /* Цвет фона при наведении */
+  color: white; /* Цвет текста при наведении */
+}
+
+.thead {
+  background: #b22222;
+  border-bottom: 5px solid #ee82ee;
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 28px;
+}
+
+.tabl2 {
+  table-layout: auto;
+  width: 50%;
+  border-spacing: 8px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.col_ellp {
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  max-width: 100px; /* Ширина */
+  height: 50px; /* Высота */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+.col_space {
+  white-space: normal;
+  max-width: 100px; /* Ширина */
+  height: 50px; /* Высота */
+}
