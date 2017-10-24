@@ -9,7 +9,7 @@
 .flex-list {
   display: flex;
   list-style-type: none;
-  padding: 0 0 0;
+  padding: 0;
   margin-left: 94px;
   margin-right: 94px;
   justify-content: space-around;
