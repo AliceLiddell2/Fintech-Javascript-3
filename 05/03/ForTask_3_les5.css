@@ -23,6 +23,21 @@
   background-color: #eef2f7;
 }
 
+.flex-editable {
+  display: flex;
+  max-width: 300px;
+  align-items: center;
+  padding: 0 6px;
+  text-decoration: none;
+  color: #434343;
+  height: 42px;
+  font-family: Roboto;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 3px -16px 12px 10px;
+}
+
 .flex-list {
   display: flex;
   list-style-type: none;
