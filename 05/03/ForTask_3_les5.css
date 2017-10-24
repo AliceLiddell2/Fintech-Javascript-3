@@ -1,98 +1,75 @@
 @import url(//fonts.googleapis.com/css?family=Roboto);
+
 .Rectangle-31 {
-    width: 829px;
-    height: 132px;
-    border-radius: 6px;
-    border: solid 1px #dddfe0;
+  width: 829px;
+  height: 132px;
+  border-radius: 6px;
+  border: solid 1px #dddfe0;
 }
-/*.flex-item {
-  display: flex;
-  list-style-type: none;
-  padding: 0 0 10px;
-  justify-content: space-between;
 
-}*/
 .Rectangle-30 {
-    width: 78px;
-    height: 42px;
-    border-radius: 6px;
-    background-color: #eef2f7;
+  width: 78px;
+  height: 42px;
+  border-radius: 6px;
+  background-color: #eef2f7;
 }
-.Rectangle-30-Copy-2 {
-//width: 300px;
-    height: 42px;
-    text-align: center;
 
-//border-radius: 6px;
-    font-family: Roboto;
-    font-size: 13px;
-    text-decoration: none;
-    background-color: #eef2f7;
+.Rectangle-30-Copy-2 {
+  height: 42px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 13px;
+  text-decoration: none;
+  background-color: #eef2f7;
 }
 
 .flex-list {
-    display: flex;
-    list-style-type: none;
-    padding: 14px 0 0;
-//padding: 0 0 0;
-    margin: 0 auto;
-//justify-content: space-evenly;
-//justify-content: space-around;
-    align-content: flex-start;
-    flex-wrap:wrap;
+  display: flex;
+  list-style-type: none;
+  padding: 14px 0 0;
+  margin: 0 auto;
+  align-content: flex-start;
+  flex-wrap:wrap;
 }
 
 .flex-item {
-    display: flex;
-//flex-basis: auto;
-    max-width: 300px;
-//justify-content: center;
-    align-items: center;
-    padding: 0 11px 0;
-    text-decoration: none;
-    color: #434343;
-    height: 42px;
-    font-family: Roboto;
-    border-radius: 6px;
-    font-size: 13px;
-    text-decoration: none;
-    background-color: #eef2f7;
-//justify-content: space-between;
-    margin-bottom: 12px;
-    margin-top: 3px;
-    margin-left: 16px;
-    margin-right: -4px;
+  display: flex;
+  max-width: 300px;
+  align-items: center;
+  padding: 0 11px 0;
+  text-decoration: none;
+  color: #434343;
+  height: 42px;
+  font-family: Roboto;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  background-color: #eef2f7;
+  margin-bottom: 12px;
+  margin-top: 3px;
+  margin-left: 16px;
+  margin-right: -4px;
 }
 
 .flex-link {
-//display: flex;
-    white-space: nowrap; /* Запрещаем перенос строк */
-    overflow: hidden; /* Обрезаем все, что не помещается в область */
-    max-width: 274px; /* Ширина*/
-//height: 50px; /* Высота */
-    text-overflow: ellipsis; /* Добавляем многоточие */
-//justify-content: space-between;
-    margin-bottom: 13px;
-    margin-top: 14px;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  max-width: 274px; /* Ширина */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  margin-bottom: 13px;
+  margin-top: 14px;
+}
 
-}
 .Group-Copy-7 {
-    width: 13px;
-    height: 13px;
-    object-fit: contain;
-    margin-right:3px;
-    margin-left: 10px;
-    margin-bottom: 13px;
-    margin-top: 14px;
-}
-/*.Group-Copy-7 {
-  display:flex;
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   object-fit: contain;
-}*/
+  margin-right:3px;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  margin-top: 14px;
+}
+
 .obj-flex {
-    display: flex;
-//width: 15px;
-//justify-content: space-between;
+  display: flex;
 }
