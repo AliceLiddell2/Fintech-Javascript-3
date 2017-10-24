@@ -42,7 +42,7 @@ button {
   font-size: 17px;
   line-height: 1.41;
   text-align: center;
-  color: #333333;
+  color: #333;
   border: 0;
 }
 
@@ -52,8 +52,8 @@ button {
   width: 542px;
   height: 413px;
   object-fit: contain;
-  float:left;
-  transform:scale(1.32);
+  float: left;
+  transform: scale(1.32);
 }
 
 .floating-box {
