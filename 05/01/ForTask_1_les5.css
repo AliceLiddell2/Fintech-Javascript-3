@@ -1,5 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Roboto);
-.menu{
+
+.menu {
   width: 1080px;
   height: 65px;
   background-color: #3e4757;
@@ -8,7 +9,7 @@
 .flex-list {
   display: flex;
   list-style-type: none;
-  padding: 0px 0px 0px;
+  padding: 0 0 0;
   margin-left: 94px;
   margin-right: 94px;
   justify-content: space-around;
@@ -24,10 +25,10 @@
   font-family: Roboto;
   font-size: 13px;
   letter-spacing: 0.9px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .flex-link:hover {
-  padding: 0px 0px 22px;
+  padding: 0 0 22px;
   border-bottom: 3px solid #ffdd2d;
 }
