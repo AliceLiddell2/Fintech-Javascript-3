@@ -138,7 +138,7 @@ label {
   height: 22.7px;
   border-radius: 50%;
   border: solid 1.5px #74a3c7;
-  z-index:999999;
+  z-index: 999999;
 }
 
 .oval-excl::before {
@@ -148,6 +148,7 @@ label {
   margin: 0 auto;
   color: #d0021b;
 }
+
 .oval-excl {
   position: absolute;
   left: 92%;
@@ -220,7 +221,7 @@ button {
 }
 
 .has-float-label label,
-.has-float-label> .for-label {
+.has-float-label > .for-label {
   position: absolute;
   left: 0;
   top: 0;
@@ -231,7 +232,7 @@ button {
   opacity: 0.5;
   font-family: Roboto;
   color: #74a3c7;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .has-float-label select {
@@ -254,16 +255,16 @@ button {
 .has-float-label select::placeholder,
 .has-float-label textarea::placeholder {
   opacity: 1;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .has-float-label input:placeholder-shown:not(:focus)::placeholder,
 .has-float-label select:placeholder-shown:not(:focus)::placeholder,
 .has-float-label textarea:placeholder-shown:not(:focus)::placeholder { opacity: 0; }
 
-.has-float-label input:placeholder-shown:not(:focus) +*,
-.has-float-label select:placeholder-shown:not(:focus) +*,
-.has-float-label textarea:placeholder-shown:not(:focus) +* {
+.has-float-label input:placeholder-shown:not(:focus) + *,
+.has-float-label select:placeholder-shown:not(:focus) + *,
+.has-float-label textarea:placeholder-shown:not(:focus) + * {
   font-family: Roboto;
   font-size: 17px;
   color: #74a3c7;
@@ -274,10 +275,10 @@ button {
 .has-float-label select:focus,
 .has-float-label textarea:focus {
   outline: 0;
-  border-color: rgba(0,0,0,0.5)
+  border-color: rgba(0, 0, 0, 0.5)
 }
 
 .has-float-label select {
-  padding-right:2em;
-  background-size:8px 10px
+  padding-right: 2em;
+  background-size: 8px 10px
 }
