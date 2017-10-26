@@ -219,7 +219,7 @@ button {
 }
 
 .has-float-label label,
-.has-float-label>span {
+.has-float-label>.for-label {
   position: absolute;
   left: 0;
   top: 0;
