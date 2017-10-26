@@ -10,9 +10,9 @@
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin-left: 94px;
-  margin-right: 94px;
-  justify-content: space-around;
+  padding-left: 126px;
+  padding-right: 126px;
+  justify-content: space-between;
 }
 
 .flex-item {
@@ -28,6 +28,8 @@
   color: #fff;
 }
 
+.flex-link:active, 
+.flex-link:focus,
 .flex-link:hover {
   padding: 0 0 22px;
   border-bottom: 3px solid #ffdd2d;
