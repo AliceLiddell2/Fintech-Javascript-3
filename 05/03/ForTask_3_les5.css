@@ -58,14 +58,15 @@
   display: flex;
 }
 
-.close:before,
-.close:after {
+.close::before,
+.close::after {
   position: absolute;
   content: ' ';
   width: 1px;
   height: 15px;
   background-color: #74a3c7;
 }
+
 .close {
   position: relative;
   padding: 5px 0px 10px 14px;
@@ -73,9 +74,11 @@
   width: 11px;
   height: 11px;
 }
-.close:before {
+
+.close::before {
   transform: rotate(45deg);
 }
-.close:after {
+
+.close::after {
   transform: rotate(-45deg);
 }
