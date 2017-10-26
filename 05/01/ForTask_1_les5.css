@@ -25,11 +25,14 @@
   font-family: Roboto;
   font-size: 13px;
   letter-spacing: 0.9px;
+  text-transform: uppercase;
   color: #fff;
 }
 
-.flex-link:active, 
+.flex-link:active,
+
 .flex-link:focus,
+
 .flex-link:hover {
   padding: 0 0 22px;
   border-bottom: 3px solid #ffdd2d;
