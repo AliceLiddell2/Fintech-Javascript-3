@@ -3,6 +3,7 @@
 .conteiner {
   margin: 0 auto;
   max-width: 830px;
+  padding: 2px 250px 0 0;
 }
 .Mask {
   width: 100%;
