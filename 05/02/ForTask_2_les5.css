@@ -1,9 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
 
+.conteiner {
+  margin: 0 auto;
+  max-width: 830px;
+}
 .Mask {
-  width: 1080px;
+  width: 100%;
   height: 413px;
   overflow: hidden;
+  margin: 0 auto;
   background-image: linear-gradient(to right, #1489e7, #003e82);
 }
 
