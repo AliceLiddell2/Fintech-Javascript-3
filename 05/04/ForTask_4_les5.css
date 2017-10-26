@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+
+.header2 {
+    width: 540px;
+    height: 120px;
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.08;
+    text-align: center;
+    margin: 0 auto;
+    color: #333;
+}
+
+.header3 {
+    width: 245px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 25px;
+    color: #333;
+}
+
+.menu1 {
+    text-align: center;
+}
+
+label {
+    display:flex;
+    position: relative;
+    z-index:2;
+}
+
+.flex-list {
+    display: flex;
+    z-index:2;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex-item {
+    align-items: center;
+    width: 508px;
+    height: 66px;
+    border-radius: 6px;
+    background-color: #eef2f7;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.err-message {
+    font-family: Roboto;
+    font-size: 13px;
+    color: #d0021b;
+    padding-right: 30px;
+    margin-top: -14px;
+}
+
+#flex-item-wrong {
+    display: inline-block;
+    border:0;
+    border: solid 1px #d0021b;
+    border-radius: 6px;
+    margin-bottom: 26px;
+}
+
+.flex-link {
+    text-decoration: none;
+    height: 20px;
+    opacity: 0.6;
+    font-family: Roboto;
+    font-size: 17px;
+//text-align: center;
+    color: #74a3c7;
+//margin-left: 10px;
+//margin-right: 324px;
+}
+
+.flex-list-choose {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+.flex-item-choose {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 258px;
+    height: 66px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: solid 1px #dddfe0;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.flex-link-choose {
+    text-decoration: none;
+    height: 20px;
+    opacity: 0.6;
+    font-family: Roboto;
+    font-size: 17px;
+    margin-right: 120px;
+    color: #74a3c7;
+}
+
+.oval-1 {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.oval-2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #eef2f7;
+    object-fit: contain;
+}
+
+.oval-quest:before {
+    content: "?";
+    font-family: Roboto;
+    font-size: 17px;
+    margin: 0 auto;
+    color: #74a3c7;
+}
+.oval-quest {
+    position: absolute;
+    left: 92%;
+    bottom: 35%;
+    width: 22.7px;
+    height: 22.7px;
+    border-radius: 50%;
+    border: solid 1.5px #74a3c7;
+    z-index:999999;
+}
+
+.oval-excl:before {
+    content: "!";
+    font-family: Roboto;
+    font-size: 17px;
+    margin: 0 auto;
+    color: #d0021b;
+}
+.oval-excl {
+    position: absolute;
+    left: 92%;
+    top: 21%;
+    bottom: 12%;
+    width: 22.7px;
+    height: 22.7px;
+    border-radius: 50%;
+    border: solid 1.5px #d0021b;
+    z-index:1;
+    margin-right: 50px;
+}
+
+.Line {
+    position: absolute;
+    left: 93%;
+    top: 40%;
+    bottom: 12%;
+    width: 12px;
+    height: 6px;
+    object-fit: contain;
+}
+
+button {
+    width: 258px;
+    height: 66px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #ffdd2d;
+    margin-top: 50px;
+}
+
+.font3 {
+    font-family: Roboto;
+    font-size: 17px;
+    color: #333;
+}
+
+.oval-quest:hover::after {
+    content: "Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.";
+    position: absolute;
+    z-index: 1;
+    font-family: Roboto;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.38;
+    color: #9299a2;
+    width: 252px;
+    height: 72px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: solid 1px #dddfe0;
+    padding: 16px 16px 16px 16px;
+    right: 38px;
+    top: -40px;
+}
+
+.oval-2:active,
+.oval-2:focus {
+    width: 8px;
+    height: 8px;
+    background-color: #3e4757;
+    border-radius: 50%;
+    margin: -4px 0px 0px -4px;
+    border: solid 12px #ffdd2d;
+}
+
+.has-float-label {
+//display:flex;
+    position:relative;
+    margin-top: 24px;
+}
+
+.has-float-label label,
+.has-float-label>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 18px;
+    padding-top: 23px;
+    cursor: text;
+    font-size: 13px; /*text after choosing*/
+    opacity: 0.5;
+    font-family: Roboto;
+    color: #74a3c7;
+    transition: all .2s;
+}
+
+.has-float-label select {
+    appearance: none;
+}
+
+.has-float-label textarea { width: 100%; } //for having no bounder on the form
+
+                                             .has-float-label input,
+                                             .has-float-label select,
+                                             .has-float-label textarea {
+                                                 font-size: inherit;
+                                                 padding-top: 1em;
+                                                 margin-bottom: 2px;
+                                                 border: 0;
+                                                 border-radius: 6px;
+                                             }
+
+.has-float-label input::placeholder,
+.has-float-label select::placeholder,
+.has-float-label textarea::placeholder {
+    opacity: 1;
+    transition: all .2s;
+}
+
+.has-float-label input:placeholder-shown:not(:focus)::placeholder,
+.has-float-label select:placeholder-shown:not(:focus)::placeholder,
+.has-float-label textarea:placeholder-shown:not(:focus)::placeholder{opacity: 0;}
+
+.has-float-label input:placeholder-shown:not(:focus)+*,
+.has-float-label select:placeholder-shown:not(:focus)+*,
+.has-float-label textarea:placeholder-shown:not(:focus)+* {
+    font-family: Roboto;
+    font-size: 17px;
+    color: #74a3c7;
+    top: 0.5em;
+}
+
+.has-float-label input:focus,
+.has-float-label select:focus,
+.has-float-label textarea:focus {
+    outline: 0;
+    border-color: rgba(0,0,0,0.5)
+}
+
+.has-float-label select {
+    padding-right:2em;
+    background-size:8px 10px
+}
