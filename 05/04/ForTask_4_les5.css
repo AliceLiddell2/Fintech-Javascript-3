@@ -265,17 +265,23 @@ button {
 }
 
 .text {
-  height: 19px;
+  height: 20px;
+  width: 30px;
   opacity: 0.6;
   font-family: Roboto;
   font-weight: 400;
   font-size: 17px;
   margin-right: 130px;
   color: #74a3c7;
+  transition: 0.2s color ease;
 }
 
 .native:checked ~ .text {
-  color: black;
+  width: 30px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 17px;
+  color: #333;
   opacity: 1;
 }
 
@@ -310,5 +316,5 @@ button {
 }
 
 .native:checked ~ .mark::before {
-  transform: translate(-50%,-50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
