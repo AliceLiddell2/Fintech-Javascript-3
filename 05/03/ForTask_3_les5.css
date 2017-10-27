@@ -52,13 +52,13 @@ body {
 }
 
 .flex-link {
-    white-space: nowrap; /* Отменяем перенос текста */
-    overflow: hidden; /* Обрезаем содержимое */
-    max-width: 274px; /* Ширина */
-    background: #eef2f7; /* Цвет фона */
-    position: relative; /* Относительное позиционирование */
-    margin-bottom: 13px;
-    margin-top: 15px;
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  max-width: 274px; /* Ширина */
+  background: #eef2f7; /* Цвет фона */
+  position: relative; /* Относительное позиционирование */
+  margin-bottom: 13px;
+  margin-top: 15px;
 }
 
 .obj-flex {
