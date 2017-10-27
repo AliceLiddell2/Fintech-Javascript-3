@@ -1,18 +1,39 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Задание 5.4</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="ForTask_4_les5.css">
+    <title>Task 4</title>
 </head>
 <body>
-<h1>Сверстать форму. Pixel-perfect. Select делать не нужно</h1>
-<p>
-    Подробности по ссылке:
-    <a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333">
-        https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333
-    </a>, для того чтобы получить доступ, нужно зарегестрироваться на
-    <a href="https://zeplin.io/">zeplin.io</a>, и попросить доступ у Евгения Мамаева.
-</p>
-<img src="./task.png" alt="">
+<h2 class = "header2">Заполните несколько простых полей</h2>
+<form>  
+  <nav class="menu1">
+  <ul class="flex-list">   
+    <li><label class="has-float-label"><input type = "text" class="flex-item" required placeholder = " "><span class="for-label">ФИО</span><img src="https://cdn.zeplin.io/58a307271a9f6d513890adc8/assets/BC5B5290-924E-43AC-A261-469E078814EB.png"
+     srcset="https://cdn.zeplin.io/58a307271a9f6d513890adc8/assets/BC5B5290-924E-43AC-A261-469E078814EB.png 2x,
+             https://cdn.zeplin.io/58a307271a9f6d513890adc8/assets/BC5B5290-924E-43AC-A261-469E078814EB.png 3x"
+     alt="No download" class="Line"></label></li>
+    <li><label class="has-float-label">
+      <input id = "flex-item-wrong" type = "text" class="flex-item" required pattern ="^[А-Яа-яЁё\s]+$" placeholder = " ">
+      <span class="for-label">Город проживания</span><span class="oval-excl"></span></label>
+    </li>
+    <li class = "err-message">Для заполнения этого поля недопустимо использовать буквы латинского алфавита</li>
+    <li><label class="has-float-label"><input type = "tel" class="flex-item" required placeholder = " "><span class="for-label">Мобильный телефон</span></label></li>
+    <li><label class="has-float-label"><input type = "email" class="flex-item" required placeholder = " "><span class="for-label">Электронная почта</span>
+      <span class="oval-quest"></span></label></li>    
+  </ul>
+</nav>
+</form>
+<h3 class = "header3">Выберите это или другое</h3>
+<nav class="menu1">
+  <ul class="flex-list-choose">
+    <li class="flex-item-choose"><a href="#" class="flex-link-choose">Это</a><input type="radio" class="oval-2"/></li>
+    <li class="flex-item-choose"><a href="#" class="flex-link-choose">Другое</a><input type="radio" class="oval-2"/></li>
+  </ul>
+    <button type = "submit" class='font3'>
+      Отправить
+    </button>
+  </nav>
 </body>
 </html>
