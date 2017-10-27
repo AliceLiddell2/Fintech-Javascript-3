@@ -52,12 +52,13 @@ body {
 }
 
 .flex-link {
-  white-space: nowrap; /* Запрещаем перенос строк */
-  overflow: hidden; /* Обрезаем все, что не помещается в область */
-  max-width: 274px; /* Ширина */
-  text-overflow: ellipsis; /* Добавляем многоточие */
-  margin-bottom: 13px;
-  margin-top: 14px;
+    white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    max-width: 274px; /* Ширина */
+    background: #eef2f7; /* Цвет фона */
+    position: relative; /* Относительное позиционирование */
+    margin-bottom: 13px;
+    margin-top: 15px;
 }
 
 .obj-flex {
@@ -75,7 +76,7 @@ body {
 
 .close {
   position: relative;
-  padding: 5px 0 10px 14px;
+  padding: 5px 0 7px 18px;
   margin-right: -3px;
   width: 11px;
   height: 11px;
