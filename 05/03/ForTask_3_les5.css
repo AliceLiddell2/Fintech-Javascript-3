@@ -52,11 +52,12 @@ body {
 }
 
 .flex-link {
-  white-space: nowrap; /* Отменяем перенос текста */
-  overflow: hidden; /* Обрезаем содержимое */
-  max-width: 274px; /* Ширина */
-  background: #eef2f7; /* Цвет фона */
-  position: relative; /* Относительное позиционирование */
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 252px;
+  background: #eef2f7;
+  position: relative;
+  text-overflow: ellipsis;
   margin-bottom: 13px;
   margin-top: 15px;
 }
