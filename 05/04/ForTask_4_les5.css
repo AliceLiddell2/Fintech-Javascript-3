@@ -118,7 +118,7 @@ label {
   display: none;
 }
 
-.radio-item label:before {
+.radio-item label::before {
   content: " ";
   display: inline-block;
   position: relative;
@@ -130,7 +130,7 @@ label {
   object-fit: contain;
 }
 
-.radio-item input[type=radio]:checked + label:after {
+.radio-item input[type=radio]::checked + label:after {
   position: absolute;
   top: 1px;
   left: 1px;
