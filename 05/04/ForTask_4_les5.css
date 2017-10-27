@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
 
-body { 
-  margin: 0; 
+body {
+  margin: 0;
 }
 
-.header2 { 
+.header2 {
   width: 540px;
   height: 120px;
   font-family: Roboto;
@@ -17,7 +17,7 @@ body {
   padding-bottom: 39px;
 }
 
-.header3 { 
+.header3 {
   width: 245px;
   height: 24px;
   font-family: Roboto;
@@ -217,8 +217,8 @@ button {
   border-radius: 6px;
 }
 
-.has-float-label input::placeholder, 
-.has-float-label select::placeholder, 
+.has-float-label input::placeholder,
+.has-float-label select::placeholder,
 .has-float-label textarea::placeholder {
   opacity: 1;
   transition: all 0.2s;
@@ -305,8 +305,8 @@ button {
   z-index: 1;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%) scale(0);
-  border-radius: 50%; 
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
 }
 
 .native:checked ~ .mark::before {
