@@ -5,248 +5,248 @@ body {
 }
 
 .header2 { 
-  width: 540px; 
-  height: 120px; 
-  font-family: Roboto; 
-  font-size: 50px; 
-  font-weight: 300; 
-  line-height: 1.08; 
-  text-align: center; 
-  margin: 0 auto; 
-  color: #333; 
-  padding-bottom: 39px; 
+  width: 540px;
+  height: 120px;
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.08;
+  text-align: center;
+  margin: 0 auto;
+  color: #333;
+  padding-bottom: 39px;
 }
 
 .header3 { 
-  width: 245px; 
-  height: 24px; 
-  font-family: Roboto; 
-  font-size: 21px; 
-  font-weight: 300; 
-  text-align: center; 
-  margin: 0 auto; 
-  padding-top: 27px; 
-  padding-bottom: 9px; 
-  color: #333; 
+  width: 245px;
+  height: 24px;
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 9px;
+  color: #333;
 }
 
 .menu1 { text-align: center; }
 
 label {
-  display: flex; 
-  position: relative; 
-  z-index: 2; 
+  display: flex;
+  position: relative;
+  z-index: 2;
 }
 
 .flex-list {
-  display: flex; 
-  z-index: 2; 
-  align-items: center; 
-  flex-direction: column; 
-  list-style-type: none; 
-  padding: 0; 
-  margin-top: 0.5px; 
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.5px;
 }
 
 .flex-item {
-  align-items: center; 
-  width: 508px; 
-  height: 48px; 
-  border-radius: 6px; 
-  background-color: #eef2f7; 
-  padding-left: 15px; 
-  padding-right: 15px; 
+  align-items: center;
+  width: 508px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #eef2f7;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .err-message {
-  font-family: Roboto; 
-  font-size: 13px; 
-  color: #d0021b; 
-  padding-right: 19px; 
-  margin-top: -14px; 
+  font-family: Roboto;
+  font-size: 13px;
+  color: #d0021b;
+  padding-right: 19px;
+  margin-top: -14px;
 }
 
 #flex-item-wrong {
-  display: inline-block; 
-  border: 0; 
-  border: solid 1px #d0021b; 
-  border-radius: 6px; 
-  margin-bottom: 26px; 
+  display: inline-block;
+  border: 0;
+  border: solid 1px #d0021b;
+  border-radius: 6px;
+  margin-bottom: 26px;
 }
 
 .flex-link {
-  text-decoration: none; 
-  height: 20px; 
-  opacity: 0.6; 
-  font-family: Roboto; 
-  font-weight: 400; 
-  font-size: 17px; 
-  color: #74a3c7; 
+  text-decoration: none;
+  height: 20px;
+  opacity: 0.6;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 17px;
+  color: #74a3c7;
 }
 
 .flex-list-choose {
-  display: flex; 
-  list-style-type: none; 
-  justify-content: center; 
-  padding: 0; 
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
 }
 
 .oval-quest::before {
-  content: "?"; 
-  font-family: Roboto; 
-  font-weight: 400; 
-  font-size: 17px; 
-  margin: 0 auto; 
-  color: #74a3c7; 
+  content: "?";
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0 auto;
+  color: #74a3c7;
 }
 
 .oval-quest {
-  position: absolute; 
-  left: 92.5%; 
-  bottom: 25%; 
-  width: 22.7px; 
-  height: 22.7px; 
-  border-radius: 50%; 
-  border: solid 1.5px #74a3c7; 
-  z-index: 99; 
+  position: absolute;
+  left: 92.5%;
+  bottom: 25%;
+  width: 22.7px;
+  height: 22.7px;
+  border-radius: 50%;
+  border: solid 1.5px #74a3c7;
+  z-index: 99;
 }
 
 .oval-excl::before {
-  content: "!"; 
-  font-family: Roboto; 
-  font-weight: 400; 
-  font-size: 17px; 
-  margin: 0 auto; 
-  color: #d0021b; 
+  content: "!";
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0 auto;
+  color: #d0021b;
 }
 
 .oval-excl {
-  position: absolute; 
-  left: 92.5%; 
-  top: 21%; 
-  bottom: 12%; 
-  width: 22.7px; 
-  height: 22.7px; 
-  border-radius: 50%; 
-  border: solid 1.5px #d0021b; 
-  z-index: 99; 
-  margin-right: 50px; 
+  position: absolute;
+  left: 92.5%;
+  top: 21%;
+  bottom: 12%;
+  width: 22.7px;
+  height: 22.7px;
+  border-radius: 50%;
+  border: solid 1.5px #d0021b;
+  z-index: 99;
+  margin-right: 50px;
 }
 
 .Line {
-  position: absolute; 
-  left: 95%; 
-  top: 46%; 
-  width: 12px; 
-  height: 6px; 
-  object-fit: contain; 
+  position: absolute;
+  left: 95%;
+  top: 46%;
+  width: 12px;
+  height: 6px;
+  object-fit: contain;
 }
 
 button {
-  width: 258px; 
-  height: 66px; 
-  text-align: center; 
-  border-radius: 6px; 
-  background-color: #ffdd2d; 
-  margin-top: 31px; 
+  width: 258px;
+  height: 66px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #ffdd2d;
+  margin-top: 31px;
 }
 
 .font3 {
-  font-family: Roboto; 
-  font-weight: 400; 
-  font-size: 17px; 
-  color: #333; 
-  padding-top: 6px; 
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 17px;
+  color: #333;
+  padding-top: 6px;
 }
 
 .oval-quest:hover::after {
-  content: "Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра."; 
-  position: absolute; 
-  z-index: 1; 
-  font-family: Roboto; 
-  font-weight: 400; 
-  text-align: left; 
-  font-size: 13px; 
-  line-height: 1.38; 
-  color: #9299a2; 
-  width: 252px; 
-  height: 72px; 
-  border-radius: 6px; 
-  background-color: #fff; 
-  border: solid 1px #dddfe0; 
-  padding: 16px; 
+  content: "Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.";
+  position: absolute;
+  z-index: 1;
+  font-family: Roboto;
+  font-weight: 400;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #9299a2;
+  width: 252px;
+  height: 72px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: solid 1px #dddfe0;
+  padding: 16px;
   right: 38px;
-  top: -40px; 
+  top: -40px;
 }
 
 .has-float-label {
-  position: relative; 
-  margin-top: 24px; 
+  position: relative;
+  margin-top: 24px;
 }
 
-.has-float-label label, 
+.has-float-label label,
 .has-float-label > .for-label {
-  position: absolute; 
-  left: 0; 
-  top: 0; 
-  padding-left: 19px; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 19px;
   padding-top: 15px;
-  cursor: text; 
-  font-size: 13px; 
-  opacity: 0.5; 
-  font-family: Roboto; 
-  font-weight: 400; 
-  color: #74a3c7; 
-  transition: all 0.2s; 
+  cursor: text;
+  font-size: 13px;
+  opacity: 0.5;
+  font-family: Roboto;
+  font-weight: 400;
+  color: #74a3c7;
+  transition: all 0.2s;
 }
 
 .has-float-label select {
-  appearance: none; 
+  appearance: none;
 }
 
 .has-float-label textarea { width: 100%; }
 
-.has-float-label input, 
-.has-float-label select, 
+.has-float-label input,
+.has-float-label select,
 .has-float-label textarea {
-  font-size: 17px; 
-  font-family: Roboto; 
-  font-weight: 400; 
+  font-size: 17px;
+  font-family: Roboto;
+  font-weight: 400;
   padding-top: 16px;
-  border: 0; 
-  border-radius: 6px; 
+  border: 0;
+  border-radius: 6px;
 }
 
 .has-float-label input::placeholder, 
 .has-float-label select::placeholder, 
 .has-float-label textarea::placeholder {
-  opacity: 1; 
-  transition: all 0.2s; 
+  opacity: 1;
+  transition: all 0.2s;
 }
 
-.has-float-label input:placeholder-shown:not(:focus)::placeholder, 
-.has-float-label select:placeholder-shown:not(:focus)::placeholder, 
+.has-float-label input:placeholder-shown:not(:focus)::placeholder,
+.has-float-label select:placeholder-shown:not(:focus)::placeholder,
 .has-float-label textarea:placeholder-shown:not(:focus)::placeholder { opacity: 0; }
 
-.has-float-label input:placeholder-shown:not(:focus) + *, 
-.has-float-label select:placeholder-shown:not(:focus) + *, 
+.has-float-label input:placeholder-shown:not(:focus) + *,
+.has-float-label select:placeholder-shown:not(:focus) + *,
 .has-float-label textarea:placeholder-shown:not(:focus) + * {
-  font-family: Roboto; 
-  font-size: 17px; 
-  color: #74a3c7; 
-  top: 0.5em; 
+  font-family: Roboto;
+  font-size: 17px;
+  color: #74a3c7;
+  top: 0.5em;
 }
 
-.has-float-label input:focus, 
-.has-float-label select:focus, 
+.has-float-label input:focus,
+.has-float-label select:focus,
 .has-float-label textarea:focus {
-  outline: 0; 
-  border-color: rgba(0, 0, 0, 0.5); 
+  outline: 0;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
 .has-float-label select {
-  padding-right: 2em; 
-  background-size: 8px 10px; 
+  padding-right: 2em;
+  background-size: 8px 10px;
 }
 
 .radio-button {
@@ -254,29 +254,29 @@ button {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-around;
-  width: 256px; 
-  height: 65px; 
-  border-radius: 6px; 
-  background-color: #fff; 
-  border: solid 1px #dddfe0; 
-  margin-left: 12px; 
-  margin-right: 12px; 
+  width: 256px;
+  height: 65px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: solid 1px #dddfe0;
+  margin-left: 12px;
+  margin-right: 12px;
   cursor: pointer;
 }
 
 .text {
-  height: 19px; 
-  opacity: 0.6; 
-  font-family: Roboto; 
-  font-weight: 400; 
-  font-size: 17px; 
-  margin-right: 130px; 
+  height: 19px;
+  opacity: 0.6;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 17px;
+  margin-right: 130px;
   color: #74a3c7;
 }
 
 .native:checked ~ .text {
   color: black;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .native {
