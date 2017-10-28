@@ -48,7 +48,6 @@ body {
   font-size: 13px;
   font-weight: 400;
   background-color: #eef2f7;
-  //background-color: red;
   margin: 3px -11px 12px 17px;
   padding-right: 9px;
 }
@@ -72,8 +71,7 @@ body {
   left: 210px;
   height: 42px;
   width: 75px;
-  /* Градиент */
-  background: linear-gradient(to right, rgba(255,0,0,0), #eef2f7 100%);  
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), #eef2f7 100%);
 }
 
 .obj-flex {
