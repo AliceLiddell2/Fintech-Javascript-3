@@ -1,6 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400&subset=cyrillic,greek');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400&subset=cyrillic,greek');
 
-@prog-main-font: Roboto;
+@prog-main-font: 'Roboto';
+@prog-sub-font: 'Alegreya Sans', sans-serif;
 @font-weight-1: 100;
 @font-weight-3: 300;
 @font-weight-4: 400;
@@ -43,7 +45,7 @@ body {
 .header__phone {
   width: 173px;
   height: 21px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   text-decoration: none;
   font-size: 21px;
@@ -104,7 +106,7 @@ body {
 
 .menu-list__item-info {
   text-decoration: none;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 13px;
   font-weight: @font-weight-4;
   letter-spacing: 0.9px;
@@ -139,7 +141,7 @@ body {
 .choose-card__header {
   width: 342px;
   height: 100px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 50px;
   font-weight: @font-weight-1;
   line-height: 1;
@@ -152,7 +154,7 @@ body {
 .choose-card__descr {
   width: 326px;
   height: 48px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 16px;
   font-weight: @font-weight-4;
   line-height: 1.5;
@@ -161,7 +163,7 @@ body {
 }
 
 .choose-card__button {
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 17px;
   font-weight: @font-weight-4;
   line-height: 1.41;
@@ -200,7 +202,7 @@ body {
 
 .tags-header {
   height: 120px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 50px;
   font-weight: @font-weight-3;
   text-align: center;
@@ -225,7 +227,7 @@ body {
   text-decoration: none;
   color: @black-col;
   height: 42px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   border-radius: 6.2px;
   font-size: 13px;
@@ -249,7 +251,7 @@ body {
   text-decoration: none;
   color: @black-col;
   height: 42px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   border-radius: 6px;
   font-size: 13px;
   font-weight: @font-weight-4;
@@ -311,7 +313,7 @@ body {
 
 .fill-subheader {
   height: 120px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 50px;
   font-weight: @font-weight-3;
   line-height: 1.08;
@@ -325,7 +327,7 @@ body {
 .choose-subheader {
   width: 245px;
   height: 24px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 21px;
   font-weight: @font-weight-3;
   text-align: center;
@@ -367,7 +369,7 @@ label {
 }
 
 .fill-form__err-message {
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 13px;
   color: #d0021b;
   padding-right: 19px;
@@ -392,7 +394,7 @@ label {
 
 .oval-quest__img::before {
   content: "?";
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   font-size: 17px;
   margin: 0 auto;
@@ -412,7 +414,7 @@ label {
 
 .oval-excl__img::before {
   content: "!";
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   font-size: 17px;
   margin: 0 auto;
@@ -442,7 +444,7 @@ label {
 }
 
 .choose-button__text {
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   font-size: 17px;
   color: @black-col;
@@ -466,7 +468,7 @@ label {
 .fill-form__tooltip {
   position: absolute;
   z-index: 1;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   text-align: left;
   font-size: 13px;
@@ -503,7 +505,7 @@ label {
   cursor: text;
   font-size: 13px;
   opacity: 0.5;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   color: @dark-bl-col;
   transition: all 0.2s;
@@ -519,7 +521,7 @@ label {
 .fill-form__has-float-label select,
 .fill-form__has-float-label textarea {
   font-size: 17px;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   padding-top: 16px;
   border: 0;
@@ -540,7 +542,7 @@ label {
 .fill-form__has-float-label input:placeholder-shown:not(:focus) + *,
 .fill-form__has-float-label select:placeholder-shown:not(:focus) + *,
 .fill-form__has-float-label textarea:placeholder-shown:not(:focus) + * {
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-size: 17px;
   color: @dark-bl-col;
   top: 0.5em;
@@ -578,7 +580,7 @@ label {
   height: 20px;
   width: 30px;
   opacity: 0.6;
-  font-family: @prog-main-font;
+  font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
   font-size: 17px;
   margin-right: 130px;
