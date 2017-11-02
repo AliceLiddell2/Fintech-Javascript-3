@@ -348,7 +348,7 @@ label {
   z-index: 2;
 }
 
-.fill-form__list {
+.fill-form-list {
   display: flex;
   z-index: 2;
   align-items: center;
@@ -358,7 +358,7 @@ label {
   margin-top: 0.5px;
 }
 
-.fill-form__list-item {
+.fill-form-list__item {
   align-items: center;
   width: 508px;
   height: 48px;
@@ -368,7 +368,7 @@ label {
   padding-right: 15px;
 }
 
-.fill-form__err-message {
+.fill-form-list__err-message {
   font-family: @prog-main-font, @prog-sub-font;
   font-size: 13px;
   color: #d0021b;
@@ -465,7 +465,7 @@ label {
   background-color: yellow;
 }
 
-.fill-form__tooltip {
+.fill-form-list__tooltip {
   position: absolute;
   z-index: 1;
   font-family: @prog-main-font, @prog-sub-font;
@@ -486,17 +486,17 @@ label {
   transition: opacity 0.8s;
 }
 
-.oval-quest__img:hover .fill-form__tooltip {
+.oval-quest__img:hover .fill-form-list__tooltip {
   opacity: 1;
 }
 
-.fill-form__has-float-label {
+.fill-form-list__has-float-label {
   position: relative;
   margin-top: 24px;
 }
 
-.fill-form__has-float-label label,
-.fill-form__has-float-label > .fill-form__for-label {
+.fill-form-list__has-float-label label,
+.fill-form-list__has-float-label > .fill-form-list__for-label {
   position: absolute;
   left: 0;
   top: 0;
@@ -511,15 +511,15 @@ label {
   transition: all 0.2s;
 }
 
-.fill-form__has-float-label select {
+.fill-form-list__has-float-label select {
   appearance: none;
 }
 
-.fill-form__has-float-label textarea { width: 100%; }
+.fill-form-list__has-float-label textarea { width: 100%; }
 
-.fill-form__has-float-label input,
-.fill-form__has-float-label select,
-.fill-form__has-float-label textarea {
+.fill-form-list__has-float-label input,
+.fill-form-list__has-float-label select,
+.fill-form-list__has-float-label textarea {
   font-size: 17px;
   font-family: @prog-main-font, @prog-sub-font;
   font-weight: @font-weight-4;
@@ -528,39 +528,39 @@ label {
   border-radius: 6px;
 }
 
-.fill-form__has-float-label input::placeholder,
-.fill-form__has-float-label select::placeholder,
-.fill-form__has-float-label textarea::placeholder {
+.fill-form-list__has-float-label input::placeholder,
+.fill-form-list__has-float-label select::placeholder,
+.fill-form-list__has-float-label textarea::placeholder {
   opacity: 1;
   transition: all 0.2s;
 }
 
-.fill-form__has-float-label input:placeholder-shown:not(:focus)::placeholder,
-.fill-form__has-float-label select:placeholder-shown:not(:focus)::placeholder,
-.fill-form__has-float-label textarea:placeholder-shown:not(:focus)::placeholder { opacity: 0; }
+.fill-form-list__has-float-label input:placeholder-shown:not(:focus)::placeholder,
+.fill-form-list__has-float-label select:placeholder-shown:not(:focus)::placeholder,
+.fill-form-list__has-float-label textarea:placeholder-shown:not(:focus)::placeholder { opacity: 0; }
 
-.fill-form__has-float-label input:placeholder-shown:not(:focus) + *,
-.fill-form__has-float-label select:placeholder-shown:not(:focus) + *,
-.fill-form__has-float-label textarea:placeholder-shown:not(:focus) + * {
+.fill-form-list__has-float-label input:placeholder-shown:not(:focus) + *,
+.fill-form-list__has-float-label select:placeholder-shown:not(:focus) + *,
+.fill-form-list__has-float-label textarea:placeholder-shown:not(:focus) + * {
   font-family: @prog-main-font, @prog-sub-font;
   font-size: 17px;
   color: @dark-bl-col;
   top: 0.5em;
 }
 
-.fill-form__has-float-label input:focus,
-.fill-form__has-float-label select:focus,
-.fill-form__has-float-label textarea:focus {
+.fill-form-list__has-float-label input:focus,
+.fill-form-list__has-float-label select:focus,
+.fill-form-list__has-float-label textarea:focus {
   outline: 0;
   border-color: rgba(0, 0, 0, 0.5);
 }
 
-.fill-form__has-float-label select {
+.fill-form-list__has-float-label select {
   padding-right: 2em;
   background-size: 8px 10px;
 }
 
-.choose-list__radio-button {
+.choose-list__button {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -794,7 +794,7 @@ label {
   }
 
   /* for task 4 */
-  .fill-form__list-item {
+  .fill-form-list__list-item {
     align-items: center;
     max-width: 300px;
     height: 48px;
@@ -804,7 +804,7 @@ label {
     padding-right: 15px;
   }
 
-  .choose-list__radio-button {
+  .choose-list__button {
     flex-wrap: wrap;
     width: 325px;
     height: 65px;
@@ -847,7 +847,7 @@ label {
     margin-right: 180px;
   }
 
-  .fill-form__tooltip {
+  .fill-form-list__tooltip {
     font-size: 13px;
     line-height: 1.38;
     color: #9299a2;
