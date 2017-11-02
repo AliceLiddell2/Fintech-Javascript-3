@@ -82,23 +82,23 @@
 <h2 class = "fill-subheader">Заполните несколько простых полей</h2>
 <form>  
   <nav class="fill-form">
-    <ul class="fill-form__list">   
-      <li><label class="fill-form__has-float-label"><input type = "text" class="fill-form__list-item" required placeholder = " "><span class="fill-form__for-label">ФИО</span><img src="https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg"
+    <ul class="fill-form-list">
+      <li><label class="fill-form-list__has-float-label"><input type = "text" class="fill-form-list__item" required placeholder = " "><span class="fill-form-list__for-label">ФИО</span><img src="https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg"
          srcset="https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg 2x,
              https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg 3x"
          alt="line img" class="line__img"></label></li>
-      <li><label class="fill-form__has-float-label">
-        <input id = "err-fill" type = "text" class="fill-form__list-item" required pattern ="^[А-Яа-яЁё\s]+$" placeholder = " ">
-          <span class="fill-form__for-label">Город проживания</span><span class="oval-excl__img"></span></label>
+      <li><label class="fill-form-list__has-float-label">
+        <input id = "err-fill" type = "text" class="fill-form-list__item" required pattern ="^[А-Яа-яЁё\s]+$" placeholder = " ">
+          <span class="fill-form-list__for-label">Город проживания</span><span class="oval-excl__img"></span></label>
       </li>
-      <li class = "fill-form__err-message">Для заполнения этого поля недопустимо использовать буквы латинского алфавита
+      <li class = "fill-form-list__err-message">Для заполнения этого поля недопустимо использовать буквы латинского алфавита
       </li>
-      <li><label class="fill-form__has-float-label"><input type = "tel" class="fill-form__list-item" required placeholder = " ">
-        <span class="fill-form__for-label">Мобильный телефон</span></label>
+      <li><label class="fill-form-list__has-float-label"><input type = "tel" class="fill-form-list__item" required placeholder = " ">
+        <span class="fill-form-list__for-label">Мобильный телефон</span></label>
       </li>
-      <li><label class="fill-form__has-float-label"><input type = "email" class="fill-form__list-item" required placeholder = " ">
-        <span class="fill-form__for-label">Электронная почта</span>
-          <span class="oval-quest__img"><span class = "fill-form__tooltip">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</span></span></label>
+      <li><label class="fill-form-list__has-float-label"><input type = "email" class="fill-form-list__item" required placeholder = " ">
+        <span class="fill-form-list__for-label">Электронная почта</span>
+          <span class="oval-quest__img"><span class = "fill-form-list__tooltip">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</span></span></label>
       </li>    
     </ul>
   </nav>
@@ -106,7 +106,7 @@
   <h3 class = "choose-subheader">Выберите это или другое</h3>
   <nav class="choose">
     <ul class="choose-list">
-      <li><label class="choose-list__radio-button">
+      <li><label class="choose-list__button">
         <input type="radio" 
          class="native"
          name="radio">
@@ -116,7 +116,7 @@
       </li>
 
 
-    <li><label class="choose-list__radio-button">
+    <li><label class="choose-list__button">
       <input type="radio" 
          class="native"
          name="radio">
@@ -129,6 +129,6 @@
      Отправить
    </button> 
   </nav> 
-</form>  
+</form>
 </body>
 </html>
