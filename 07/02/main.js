@@ -13,7 +13,7 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance) 
 
   element.onclick = () => {
     timer = setTimeout(timeDistance);
-  }
+  };
 
   element.ondblclick = () => {
     let newLi = document.createElement('li');
