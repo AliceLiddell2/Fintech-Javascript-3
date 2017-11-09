@@ -4,15 +4,16 @@
  */
 function throttle(time, callback) {
   let wait = false;
-    return function () {
-        if (!wait) {
-            callback.call();
-            wait = true;
-            setTimeout(function () {
-                wait = false;
-            }, time);
-        }
+
+  return function () {
+    if (!wait) {
+      callback.call();
+      wait = true;
+      setTimeout(function () {
+        wait = false;
+      }, time);
     }
+  };
 }
 
 module.exports = { throttle };
