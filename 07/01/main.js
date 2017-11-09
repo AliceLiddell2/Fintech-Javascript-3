@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
     this.value = matrix;
     document.getElementById('num').innerHTML = 'Позвонить на ' + number.value;
-    document.getElementById('num').href = 'tel:' + number.value;
+    document.getElementById("num").href = 'tel:' + number.value.replace(/[^+0-9]/g, "");
     i = matrix.lastIndexOf(val.substr(-1));
     i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf('_');
     setCursorPosition(i, number);
