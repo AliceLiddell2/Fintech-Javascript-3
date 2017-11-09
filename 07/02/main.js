@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 
+let timer;
 const timeDistance = 150;
 const parentElement = document.getElementById('list');
 
