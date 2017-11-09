@@ -4,7 +4,7 @@ let timer;
 const list = document.getElementById('list');
 
 window.onload = function doubleClick(element, doubleClickHandler, timeDistance = 150) {
-  element = document.getElementById('testButton');
+  element = document.getElementById('test-button');
   function getTimeStamp() {
     let now = new Date();
 
