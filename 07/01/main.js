@@ -1,6 +1,8 @@
+/* eslint-disable linebreak-style */
+
 window.addEventListener('DOMContentLoaded', function() {
   let change = document.getElementById('number');
-  
+
   change.onclick = function() {
             number.defaultValue = '+_(___)___-__-__';
         }
@@ -28,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
     this.value = matrix;
     document.getElementById('num').innerHTML = 'Позвонить на ' + number.value;
-    document.getElementById('num').href = 'check'
+    document.getElementById('num').href = 'tel:' + number.value;
     i = matrix.lastIndexOf(val.substr(-1));
     i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf('_');
     setCursorPosition(i, number);
