@@ -1,20 +1,20 @@
 /* eslint-disable linebreak-style */
 
 window.addEventListener('DOMContentLoaded', function() {
-  let change = document.getElementById('number');
+  let number = document.getElementById('number');
 
-  change.onclick = function() {
-            number.defaultValue = '+_(___)___-__-__';
-        }
+  number.onclick = function() {
+    number.defaultValue = '+_(___)___-__-__';
+  };
   function setCursorPosition(pos, elem) {
     elem.focus();
     if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
     else if (elem.createTextRange) {
-        var range = elem.createTextRange();
-        range.collapse(true);
-        range.moveEnd('character', pos);
-        range.moveStart('character', pos);
-        range.select()
+      var range = elem.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
     }
   }
 
@@ -26,18 +26,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
     def.length >= val.length && (val = def);
     matrix = matrix.replace(/[_/g\d]/g, function(a) {
-      return val.charAt(i++) || '_'
+      return val.charAt(i++) || '_';
     });
     this.value = matrix;
     document.getElementById('num').innerHTML = 'Позвонить на ' + number.value;
-    document.getElementById("num").href = 'tel:' + number.value.replace(/[^+0-9]/g, "");
+    document.getElementById('num').href = 'tel:' + number.value.replace(/[^+0-9]/g, '');
     i = matrix.lastIndexOf(val.substr(-1));
-    i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf('_');
+    i < matrix.length && matrix !== this.defaultValue ? i++ : i = matrix.indexOf('_');
     setCursorPosition(i, number);
   }
 
   let input = document.querySelector('input');
 
   input.addEventListener('input', mask, false);
-  
+
 });
