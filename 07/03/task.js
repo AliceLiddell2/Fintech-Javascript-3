@@ -10,7 +10,7 @@ function throttle(time, callback) {
             wait = true;
             setTimeout(function () {
                 wait = false;
-            }, limit);
+            }, time);
         }
     }
 }
