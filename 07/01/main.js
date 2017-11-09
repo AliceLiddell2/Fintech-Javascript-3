@@ -8,7 +8,9 @@ window.addEventListener('DOMContentLoaded', function() {
   };
   function setCursorPosition(pos, elem) {
     elem.focus();
-    if (elem.setSelectionRange) { elem.setSelectionRange(pos, pos); }
+    if (elem.setSelectionRange) {
+      elem.setSelectionRange(pos, pos);
+    }
     else if (elem.createTextRange) {
       let range = elem.createTextRange();
 
