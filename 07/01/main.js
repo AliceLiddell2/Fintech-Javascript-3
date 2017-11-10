@@ -10,8 +10,7 @@ window.addEventListener('DOMContentLoaded', function() {
     elem.focus();
     if (elem.setSelectionRange) {
       elem.setSelectionRange(pos, pos);
-    }
-    else if (elem.createTextRange) {
+    } else if (elem.createTextRange) {
       let range = elem.createTextRange();
 
       range.collapse(true);
