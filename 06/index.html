@@ -7,23 +7,128 @@
     <title>Задание 6.1</title>
 </head>
 <body>
-<h1>Сверстать полную страницу (без футера).</h1>
-<h4>Макеты:</h4>
-<ul>
-    <li><a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a307604687f0394b3ba039">Desktop 1</a></li>
-    <li><a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333">Desktop 2</a></li>
-    <li><a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3076d2fc6273f38fc51c5">Mobile 1</a></li>
-</ul>
-<h4>Особенности:</h4>
-<ul>
-    <li>Брейкпойнт для мобильной: 640px</li>
-    <li>До брейкпойнта верстка ломаться не должна, если ломается и никак иначе не избежать, ввести промежуточный брейкпойнт.</li>
-    <li>Использоваться БЭМ-нэйминг для классов.</li>
-    <li>Использовать less.</li>
-    <li>Повторяющиеся размера, цвета вынести в переменные.</li>
-    <li>Для элементов, у которых могут меняться состояние (цвет текста, бордер, фон, размер, позиция и тп), добавить transition.</li>
-    <li>Тултип также должен появляться с анимацией.</li>
-    <li>Для иконок использовать svg.</li>
-</ul>
+<nav class = "header">
+  <ul class="header-list">
+     <li class="header-list__item" id = "header-logo"><img src="https://aliceliddell2.github.io/Fintech-Javascript-3/06/header-logo.svg"
+       srcset="https://aliceliddell2.github.io/Fintech-Javascript-3/06/header-logo.svg 2x,
+         https://aliceliddell2.github.io/Fintech-Javascript-3/06/header-logo.svg 3x"
+         alt="header logo" class="header-list__logo"></li>
+    <li class="header-list__item"><img src="https://aliceliddell2.github.io/Fintech-Javascript-3/06/logo-mobile.svg"
+       srcset="https://aliceliddell2.github.io/Fintech-Javascript-3/06/logo-mobile.svg 2x,
+         https://aliceliddell2.github.io/Fintech-Javascript-3/06/logo-mobile.svg 3x"
+         alt="mobile logo" class="header-list__mobile-logo"></li>
+    <li class="header-list__item"><a href="#" class="header-list__phone">8 800 555-11-22</a></li>
+    <li class="header-list__item" id = "header-list__mob-menu"><img src="https://aliceliddell2.github.io/Fintech-Javascript-3/06/hamburger.svg"
+       srcset="https://aliceliddell2.github.io/Fintech-Javascript-3/06/hamburger.svg 2x,
+         https://aliceliddell2.github.io/Fintech-Javascript-3/06/hamburger.svg 3x"
+         alt="mobile menu" class="header-list__mobile-menu-img"></li>
+  </ul>
+</nav>
+  
+<nav class="menu">
+  <ul class="menu-list">
+    <li class="menu-list__item"><a href="#" class="menu-list__item-info">карты</a></li>
+    <li class="menu-list__item"><a href="#" class="menu-list__item-info">вклады</a></li>
+    <li class="menu-list__item"><a href="#" class="menu-list__item-info">платежи и переводы</a></li>
+    <li class="menu-list__item"><a href="#" class="menu-list__item-info">бонусы</a></li>
+    <li class="menu-list__item"><a href="#" class="menu-list__item-info">страхование</a></li>
+    <li class="menu-list__item"><a href="#" class="menu-list__item-info">о банке</a></li>
+  </ul>
+</nav>
+
+<section class="order-card"> 
+  <div class = "choose-card">
+    <img src="https://aliceliddell2.github.io/Fintech-Javascript-3/05/02/cards.png"
+       srcset="https://aliceliddell2.github.io/Fintech-Javascript-3/05/02/cards.png 2x,
+         https://aliceliddell2.github.io/Fintech-Javascript-3/05/02/cards.png 3x"
+         alt="cards_img" class="cards">
+    <p class ="choose-card__header">Карты для вас прямо сейчас</p>
+    <p class ="choose-card__descr">Выбирайте карту, пользуйтесь <br>удобными сервисами</p>
+    <form>  
+      <button type = "submit" class="choose-card__button" id = "card-button">
+         Оформить заявку
+      </button>
+    </form>
+  </div>
+</section>    
+  
+<h2 class = "tags-header">Любые категории платежей</h2>
+<nav class="tags" contenteditable="false">
+  <ul class="tags-list" contenteditable="true">
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">Кафе</a></p><p class = "close__img"></p></li>
+    <li class ="tags-list__editable--item" contenteditable="true"></li>
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">Интернет</a></p><p class = "close__img"></p></li>
+    <li class ="tags-list__editable--item"  contenteditable="true"></li>
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">Телефон</a></p><p class = "close__img"></p></li>
+    <li class ="tags-list__editable--item" contenteditable="true"></li>
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">Авто</a></p><p class = "close__img"></p></li>
+    <li class ="tags-list__editable--item"  contenteditable="true"></li>
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">ЖКХ</a></p><p class = "close__img"></p></li>
+    <li class ="tags-list__editable--item" contenteditable="true"></li>
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">Одежда и обувь</a></p><p class = "close__img"></p></li>
+    <li class ="tags-list__editable--item" contenteditable="true"></li>
+    <li contenteditable="false" class="tags-list__item">
+      <p><a class="tags-list__item-text">Супермаркеты, гастрономы, универмаги и многое другое</a></p><p class = "close__img"></p></li>
+  <li class ="tags-list__editable--item"  contenteditable="true"></li>
+</ul> 
+</nav>
+  
+<h2 class = "fill-subheader">Заполните несколько простых полей</h2>
+<form>  
+  <nav class="fill-form">
+    <ul class="fill-form-list">
+      <li><label class="fill-form-list__has-float-label"><input type = "text" class="fill-form-list__item" required placeholder = " "><span class="fill-form-list__for-label">ФИО</span><img src="https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg"
+         srcset="https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg 2x,
+             https://aliceliddell2.github.io/Fintech-Javascript-3/06/line-copy-4.svg 3x"
+         alt="line img" class="line__img"></label></li>
+      <li><label class="fill-form-list__has-float-label">
+        <input id = "err-fill" type = "text" class="fill-form-list__item" required pattern ="^[А-Яа-яЁё\s]+$" placeholder = " ">
+          <span class="fill-form-list__for-label">Город проживания</span><span class="oval-excl__img"></span></label>
+      </li>
+      <li class = "fill-form-list__err-message">Для заполнения этого поля недопустимо использовать буквы латинского алфавита
+      </li>
+      <li><label class="fill-form-list__has-float-label"><input type = "tel" class="fill-form-list__item" required placeholder = " ">
+        <span class="fill-form-list__for-label">Мобильный телефон</span></label>
+      </li>
+      <li><label class="fill-form-list__has-float-label"><input type = "email" class="fill-form-list__item" required placeholder = " ">
+        <span class="fill-form-list__for-label">Электронная почта</span>
+          <span class="oval-quest__img"><span class = "fill-form-list__tooltip">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</span></span></label>
+      </li>    
+    </ul>
+  </nav>
+  
+  <h3 class = "choose-subheader">Выберите это или другое</h3>
+  <nav class="choose">
+    <ul class="choose-list">
+      <li><label class="choose-list__button">
+        <input type="radio" 
+         class="native"
+         name="radio">
+        <span class="choose-list__mark"></span>
+        <span class="choose-list__text">Это</span>
+        </label>
+      </li>
+
+
+    <li><label class="choose-list__button">
+      <input type="radio" 
+         class="native"
+         name="radio">
+      <span class="choose-list__mark"></span>
+      <span class="choose-list__text">Другое</span>
+      </label>
+    </li>
+   </ul>
+   <button type = "submit" class="choose-button__text" id = "choose-button">
+     Отправить
+   </button> 
+  </nav> 
+</form>
 </body>
 </html>
