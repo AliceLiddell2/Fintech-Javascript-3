@@ -5,8 +5,8 @@ let k = 0;
 function getJson(k) {
   const list = document.getElementById('list');
   let xmlhttp = new XMLHttpRequest();
-  const url = xmlhttp.open('GET', 'https://api.github.com/orgs/facebook/repos?page=1', true);
 
+  xmlhttp.open('GET', 'https://api.github.com/orgs/facebook/repos?page=1', true);
   xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       let myObj = JSON.parse(this.responseText);
