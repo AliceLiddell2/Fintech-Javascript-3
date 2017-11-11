@@ -1,14 +1,17 @@
+/* eslint-disable linebreak-style */
+
 let k = 0;
+
 function getJson(k) {
   const list = document.getElementById('list');
   let xmlhttp = new XMLHttpRequest();
-  let url = xmlhttp.open("GET", "https://api.github.com/orgs/facebook/repos?page=1", true);
+  const url = xmlhttp.open("GET", 'https://api.github.com/orgs/facebook/repos?page=1', true);
 
   xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       let myObj = JSON.parse(this.responseText);
 
-      for (let i=k; i< k+1; i++) {
+      for (let i = k; i < k + 1; i++) {
         let newLi = document.createElement('li');
 
         newLi.innerHTML = 'Name is ' + myObj[i].name + ':';
@@ -43,11 +46,11 @@ function checkInfiniteScroll(parentSelector, childSelector) {
     let pageOffset = window.pageYOffset + window.innerHeight;
 
     if(pageOffset > lastDivOffset - offsetForNewContent ) {
-      for(var i = 0; i < numElementsToAdd; i++) {
+      for(let i = 0; i < numElementsToAdd; i++) {
         let newDiv = document.createElement("div");
 
         getJson(k);
-        k = k+1;
+        k = k + 1;
         document.querySelector(parentSelector).appendChild(newDiv);
       }
       checkInfiniteScroll(parentSelector, childSelector);
@@ -63,7 +66,7 @@ function update() {
   let currScrollTime = Date.now();
 
   if(lastScrollTime + checkInterval < currScrollTime) {
-    checkInfiniteScroll("#scroll-content", "> div:last-child");
+    checkInfiniteScroll('#scroll-content', '> div:last-child');
     lastScrollTime = currScrollTime;
   }
 };
