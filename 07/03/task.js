@@ -3,17 +3,19 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function throttle(time, callback) {
-  let wait = false;
+  let calledCount = 0;
 
-  return () => {
-    if (!wait) {
-      callback.call();
-      wait = true;
-      setTimeout(() => {
-        wait = false;
-      }, time);
+  setInterval(() => {
+    calledCount = 0;
+  }, time);
+
+  let closure = () => {
+    if (1 > calledCount) {
+      calledCount++;
+      callback();
     }
-  };
+  }
+  return closure;
 }
 
 module.exports = { throttle };
