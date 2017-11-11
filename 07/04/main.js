@@ -2,7 +2,7 @@
 
 let k = 0;
 
-function getJson(k) {
+function getJson(p) {
   const list = document.getElementById('list');
   let xmlhttp = new XMLHttpRequest();
 
@@ -10,19 +10,16 @@ function getJson(k) {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       let myObj = JSON.parse(this.responseText);
+      let newLi = document.createElement('li');
 
-      for (let i = k; i < k + 1; i++) {
-        let newLi = document.createElement('li');
-
-        newLi.innerHTML = 'Name is :' + myObj[i].name + '<br> descr: ' + myObj[i].description + '<br> url: ' + myObj[i].url + '<br>';
-        list.appendChild(newLi);
-        newLi = document.createElement('li');
-        newLi.innerHTML = 'created: ' + myObj[i].created_at + '<br> commited: ' + myObj[i].pushed_at;
-        list.appendChild(newLi);
-        newLi = document.createElement('li');
-        newLi.innerHTML = '<br>';
-        list.appendChild(newLi);
-      }
+      newLi.innerHTML = 'Name is :' + myObj[p].name + '<br> descr: ' + myObj[p].description + '<br> url: ' + myObj[p].url + '<br>';
+      list.appendChild(newLi);
+      newLi = document.createElement('li');
+      newLi.innerHTML = 'created: ' + myObj[p].created_at + '<br> commited: ' + myObj[p].pushed_at;
+      list.appendChild(newLi);
+      newLi = document.createElement('li');
+      newLi.innerHTML = '<br>';
+      list.appendChild(newLi);
     }
   };
   xmlhttp.send();
