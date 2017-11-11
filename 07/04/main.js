@@ -13,20 +13,10 @@ function getJson(k) {
 
       for (let i = k; i < k + 1; i++) {
         let newLi = document.createElement('li');
-
-        newLi.innerHTML = 'Name is ' + myObj[i].name + ':';
+        newLi.innerHTML = 'Name is :' + myObj[i].name + '<br>' + 'descr: ' + myObj[i].description + '<br>' + 'url: ' + myObj[i].url + '<br>';
         list.appendChild(newLi);
         newLi = document.createElement('li');
-        newLi.innerHTML = 'descr: ' +myObj[i].description;
-        list.appendChild(newLi);
-        newLi = document.createElement('li');
-        newLi.innerHTML = 'url: ' + myObj[i].url;
-        list.appendChild(newLi);
-        newLi = document.createElement('li');
-        newLi.innerHTML = 'created: ' + myObj[i].created_at;
-        list.appendChild(newLi);
-        newLi = document.createElement('li');
-        newLi.innerHTML = 'commited: ' + myObj[i].pushed_at;
+        newLi.innerHTML = 'created: ' + myObj[i].created_at + '<br>' + 'commited: ' + myObj[i].pushed_at;
         list.appendChild(newLi);
         newLi = document.createElement('li');
         newLi.innerHTML = '<br>';
@@ -45,12 +35,12 @@ function checkInfiniteScroll(parentSelector, childSelector) {
   let lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
   let pageOffset = window.pageYOffset + window.innerHeight;
 
-  if(pageOffset > lastDivOffset - offsetForNewContent ) {
-    for(let i = 0; i < numElementsToAdd; i++) {
+  if (pageOffset > lastDivOffset - offsetForNewContent) {
+    for (let i = 0; i < numElementsToAdd; i++) {
       let newDiv = document.createElement("div");
 
       getJson(k);
-      k = k + 1;
+      k += 1;
       document.querySelector(parentSelector).appendChild(newDiv);
     }
     checkInfiniteScroll(parentSelector, childSelector);
