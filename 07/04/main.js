@@ -13,6 +13,7 @@ function getJson(k) {
 
       for (let i = k; i < k + 1; i++) {
         let newLi = document.createElement('li');
+
         newLi.innerHTML = 'Name is :' + myObj[i].name + '<br>' + 'descr: ' + myObj[i].description + '<br>' + 'url: ' + myObj[i].url + '<br>';
         list.appendChild(newLi);
         newLi = document.createElement('li');
@@ -37,7 +38,7 @@ function checkInfiniteScroll(parentSelector, childSelector) {
 
   if (pageOffset > lastDivOffset - offsetForNewContent) {
     for (let i = 0; i < numElementsToAdd; i++) {
-      let newDiv = document.createElement("div");
+      let newDiv = document.createElement('div');
 
       getJson(k);
       k += 1;
@@ -55,7 +56,7 @@ function update() {
 
   let currScrollTime = Date.now();
 
-  if(lastScrollTime + checkInterval < currScrollTime) {
+  if (lastScrollTime + checkInterval < currScrollTime) {
     checkInfiniteScroll('#scroll-content', '> div:last-child');
     lastScrollTime = currScrollTime;
   }
