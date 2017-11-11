@@ -14,10 +14,10 @@ function getJson(k) {
       for (let i = k; i < k + 1; i++) {
         let newLi = document.createElement('li');
 
-        newLi.innerHTML = 'Name is :' + myObj[i].name + '<br>' + 'descr: ' + myObj[i].description + '<br>' + 'url: ' + myObj[i].url + '<br>';
+        newLi.innerHTML = 'Name is :' + myObj[i].name + '<br> descr: ' + myObj[i].description + '<br> url: ' + myObj[i].url + '<br>';
         list.appendChild(newLi);
         newLi = document.createElement('li');
-        newLi.innerHTML = 'created: ' + myObj[i].created_at + '<br>' + 'commited: ' + myObj[i].pushed_at;
+        newLi.innerHTML = 'created: ' + myObj[i].created_at + '<br> commited: ' + myObj[i].pushed_at;
         list.appendChild(newLi);
         newLi = document.createElement('li');
         newLi.innerHTML = '<br>';
