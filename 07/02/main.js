@@ -5,7 +5,7 @@ let clicks = 0;
 let a;
 
 window.onload = function doubleClick(element, doubleClickHandler, timeDistance = 250) {
-  element = document.getElementById('btn');
+  element = document.getElementById('test-button');
   function getTimeStamp() {
     let now = new Date();
 
@@ -20,7 +20,7 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
     if (clicks === 2) {
       let b = new Date().getTime();
 
-      if (b-a < timeDistance) {
+      if (b - a < timeDistance) {
         let newLi = document.createElement('li');
 
         newLi.innerHTML = '2xClick - ' + getTimeStamp();
