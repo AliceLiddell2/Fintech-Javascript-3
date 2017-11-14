@@ -16,11 +16,8 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
 
   element.onclick = () => {
     clicks++;
-    if (clicks === 1) {
-      if (pause === 0) {
-        a = new Date().getTime();
-        console.log('a is '+ a);
-      }  
+    if ((clicks === 1) && (pause === 0)) {
+      a = new Date().getTime();  
     }
     if (clicks === 2) {
       b = new Date().getTime();    
@@ -29,11 +26,11 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
 
         newLi.innerHTML = '2xClick - ' + getTimeStamp();
         list.appendChild(newLi);
-        clicks=0;
+        clicks = 0;
         pause = 0;
       } else {
         pause = 1;
-        clicks=1;
+        clicks = 1;
         a = b;
       }
     }
