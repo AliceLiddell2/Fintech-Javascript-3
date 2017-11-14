@@ -17,10 +17,10 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
   element.onclick = () => {
     clicks++;
     if ((clicks === 1) && (pause === 0)) {
-      a = new Date().getTime();  
+      a = new Date().getTime();
     }
     if (clicks === 2) {
-      b = new Date().getTime();    
+      b = new Date().getTime();
       if (b - a < timeDistance) {
         let newLi = document.createElement('li');
 
