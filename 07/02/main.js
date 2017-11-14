@@ -3,6 +3,8 @@
 const list = document.getElementById('list');
 let clicks = 0;
 let a;
+let b;
+let pause = 0;
 
 window.onload = function doubleClick(element, doubleClickHandler, timeDistance = 250) {
   element = document.getElementById('test-button');
@@ -14,20 +16,22 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
 
   element.onclick = () => {
     clicks++;
-    if (clicks === 1) {
+    if ((clicks === 1) && (pause === 0)) {
       a = new Date().getTime();
     }
     if (clicks === 2) {
-      let b = new Date().getTime();
-
+      b = new Date().getTime();
       if (b - a < timeDistance) {
         let newLi = document.createElement('li');
 
         newLi.innerHTML = '2xClick - ' + getTimeStamp();
         list.appendChild(newLi);
         clicks = 0;
+        pause = 0;
       } else {
-        clicks = 0;
+        pause = 1;
+        clicks = 1;
+        a = b;
       }
     }
   };
