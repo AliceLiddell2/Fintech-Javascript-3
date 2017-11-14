@@ -1,10 +1,11 @@
 /* eslint-disable linebreak-style */
 
-let timer;
 const list = document.getElementById('list');
+let clicks = 0;
+let a;
 
-window.onload = function doubleClick(element, doubleClickHandler, timeDistance = 150) {
-  element = document.getElementById('test-button');
+window.onload = function doubleClick(element, doubleClickHandler, timeDistance = 250) {
+  element = document.getElementById('btn');
   function getTimeStamp() {
     let now = new Date();
 
@@ -12,14 +13,22 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
   }
 
   element.onclick = () => {
-    timer = setTimeout(timeDistance);
-  };
+    clicks++;
+    if (clicks === 1) {
+      a = new Date().getTime();
+    }
+    if (clicks === 2) {
+      let b = new Date().getTime();
 
-  element.ondblclick = () => {
-    let newLi = document.createElement('li');
+      if (b-a < timeDistance) {
+        let newLi = document.createElement('li');
 
-    clearTimeout(timer);
-    newLi.innerHTML = '2xClick - ' + getTimeStamp();
-    list.appendChild(newLi);
+        newLi.innerHTML = '2xClick - ' + getTimeStamp();
+        list.appendChild(newLi);
+        clicks = 0;
+      } else {
+        clicks = 0;
+      }
+    }
   };
 };
