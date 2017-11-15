@@ -40,4 +40,4 @@ window.onload = function doubleClick(element, doubleClickHandler, timeDistance =
       }
     }
   };
-});
+};
