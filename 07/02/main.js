@@ -17,7 +17,7 @@ function doubleClickHandler(timeDate) {
   list.appendChild(newLi);
 }
 
-function doubleClick(element, timeDistance){
+function doubleClick(element, timeDistance) {
   element.addEventListener('click', () => {
     clickCount++;
     if (clickCount === 1) {
