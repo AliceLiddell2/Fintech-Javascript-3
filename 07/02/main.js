@@ -7,7 +7,7 @@ let timeDbClick;
 let time;
 let pause = 0;
 
-window.onload = function doubleClick(element, timeDistance = 250) {
+window.addEventListener('load', function doubleClick(element, timeDistance = 250) {
   element = document.getElementById('test-button');
   function getTimeStamp() {
     let now = new Date();
@@ -23,7 +23,7 @@ window.onload = function doubleClick(element, timeDistance = 250) {
 
   element.onclick = () => {
     clicks++;
-    if ((clicks === 1) && (pause === 0)) {
+    if (clicks === 1 && pause === 0) {
       timeSgClick = new Date().getTime();
       time = getTimeStamp();
     }
@@ -40,4 +40,4 @@ window.onload = function doubleClick(element, timeDistance = 250) {
       }
     }
   };
-};
+});
