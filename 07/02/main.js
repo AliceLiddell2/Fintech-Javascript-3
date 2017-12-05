@@ -4,11 +4,10 @@ const testButton = document.getElementById('test-button');
 const list = document.getElementById('list');
 let time;
 let clickCount = 0;
+let singleClickTimer;
 
 function getTimeStamp() {
-  let now = new Date();
-
-  return ((now.getMonth() + 1) + '-' + (now.getDate()) + '-' + now.getFullYear() + ' ' + now.getHours() + ':' + ((now.getMinutes() < 10) ? ('0' + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ('0' + now.getSeconds()) : (now.getSeconds())));
+  return new Date();
 }
 
 function doubleClick(timeDate) {
