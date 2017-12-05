@@ -37,8 +37,10 @@ function checkInfiniteScroll(parentSelector, childSelector) {
     for (let i = 0; i < numElementsToAdd; i++) {
       let newDiv = document.createElement('div');
 
-      getJson(k);
-      k += 1;
+      if (k < 30) {
+        getJson(k);
+        k += 1;
+      }
       document.querySelector(parentSelector).appendChild(newDiv);
     }
     checkInfiniteScroll(parentSelector, childSelector);
