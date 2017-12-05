@@ -27,11 +27,7 @@ function getJson(p) {
       list.appendChild(newLi);
     }
   };
-  if (!stop) {
-    xmlhttp.send();
-  } else {
-    return 1;
-  }
+  xmlhttp.send();
 }
 
 let numElementsToAdd = 2;
@@ -46,9 +42,10 @@ function checkInfiniteScroll(parentSelector, childSelector) {
     for (let i = 0; i < numElementsToAdd; i++) {
       if (!stop) {
         let newDiv = document.createElement('div');
+
         getJson(k);
         k += 1;
-        
+
         document.querySelector(parentSelector).appendChild(newDiv);
       } else {
         return 0;
