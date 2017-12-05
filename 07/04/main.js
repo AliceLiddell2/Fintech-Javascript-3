@@ -41,18 +41,17 @@ function checkInfiniteScroll(parentSelector, childSelector) {
   let lastDiv = document.querySelector(parentSelector + childSelector);
   let lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
   let pageOffset = window.pageYOffset + window.innerHeight;
-  let res;
-  
+
   if (pageOffset > lastDivOffset - offsetForNewContent) {
     for (let i = 0; i < numElementsToAdd; i++) {
-      if (stop) {
-        return 0;
-      } else {
+      if (!stop) {
         let newDiv = document.createElement('div');
-
         getJson(k);
         k += 1;
+        
         document.querySelector(parentSelector).appendChild(newDiv);
+      } else {
+        return 0;
       }
     }
     checkInfiniteScroll(parentSelector, childSelector);
