@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', () => {
   let number = document.getElementById('number');
   const getById = document.getElementById('num');
 
