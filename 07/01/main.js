@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', function() {
   let number = document.getElementById('number');
 
-  number.addEventListener("click",() => {
+  number.addEventListener('click', () => {
     number.defaultValue = '+_(___)___-__-__';
   });
   function setCursorPosition(pos, elem) {
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
     let val = this.value.replace(/\D/g, '');
     const getById = document.getElementById('num');
 
-    if (def.length >= val.length) {val = def;}
+    if (def.length >= val.length) { val = def; }
     matrix = matrix.replace(/[_\d]/g, function(a) {
       return val.charAt(i++) || '_';
     });
@@ -26,8 +26,8 @@ window.addEventListener('DOMContentLoaded', function() {
     getById.innerHTML = 'Позвонить на ' + number.value;
     getById.href = 'tel:' + number.value.replace(/[^+0-9]/g, '');
     i = matrix.lastIndexOf(val.substr(-1));
-    if (i < matrix.length && matrix !== this.defaultValue) {i++;}
-    else {i = matrix.indexOf('_');}
+    if (i < matrix.length && matrix !== this.defaultValue) { i++; }
+    else { i = matrix.indexOf('_'); }
     setCursorPosition(i, number);
   }
 
