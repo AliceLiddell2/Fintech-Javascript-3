@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 
 let k = 0;
+let stop = false;
 
 function getJson(p) {
   const list = document.getElementById('list');
@@ -11,6 +12,10 @@ function getJson(p) {
     if (this.readyState === 4 && this.status === 200) {
       let myObj = JSON.parse(this.responseText);
       let newLi = document.createElement('li');
+      
+      if (typeof myObj[p] === 'undefined') {
+        return (stop = true);
+      }
 
       newLi.innerHTML = 'Name is :' + myObj[p].name + '<br> descr: ' + myObj[p].description + '<br> url: ' + myObj[p].url + '<br>';
       list.appendChild(newLi);
@@ -22,28 +27,31 @@ function getJson(p) {
       list.appendChild(newLi);
     }
   };
-  xmlhttp.send();
+  if (!stop) { xmlhttp.send();}
+  else {return 1;}
 }
 
-let numElementsToAdd = 10;
+let numElementsToAdd = 2;
 let offsetForNewContent = 20;
+let res = 0;
 
 function checkInfiniteScroll(parentSelector, childSelector) {
   let lastDiv = document.querySelector(parentSelector + childSelector);
   let lastDivOffset = lastDiv.offsetTop + lastDiv.clientHeight;
   let pageOffset = window.pageYOffset + window.innerHeight;
-
+	let res;
+  
   if (pageOffset > lastDivOffset - offsetForNewContent) {
     for (let i = 0; i < numElementsToAdd; i++) {
-      let newDiv = document.createElement('div');
 
-      if (k < 30) {
-        getJson(k);
-        k += 1;
-      } else {
+      if (stop) {
         return 0;
+      } else {
+        let newDiv = document.createElement('div');
+        res = getJson(k);
+        k += 1;
+        document.querySelector(parentSelector).appendChild(newDiv);
       }
-      document.querySelector(parentSelector).appendChild(newDiv);
     }
     checkInfiniteScroll(parentSelector, childSelector);
   }
