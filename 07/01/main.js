@@ -29,7 +29,9 @@ window.addEventListener('DOMContentLoaded', function() {
     if (i < matrix.length && matrix !== this.defaultValue) {
       i++;
     }
-    else { i = matrix.indexOf('_'); }
+    else {
+      i = matrix.indexOf('_');
+    }
     setCursorPosition(i, number);
   }
 
