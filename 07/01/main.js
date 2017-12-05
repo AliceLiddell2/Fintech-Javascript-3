@@ -26,10 +26,12 @@ window.addEventListener('DOMContentLoaded', function() {
     getById.innerHTML = 'Позвонить на ' + number.value;
     getById.href = 'tel:' + number.value.replace(/[^+0-9]/g, '');
     i = matrix.lastIndexOf(val.substr(-1));
-    if (i < matrix.length && matrix !== this.defaultValue) {
+    if (i < matrix.length && matrix !== this.defaultValue)
+    {
       i++;
     }
-    else {
+    else
+    {
       i = matrix.indexOf('_');
     }
     setCursorPosition(i, number);
