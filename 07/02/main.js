@@ -5,10 +5,6 @@ const list = document.getElementById('list');
 let time;
 let clickCount = 0;
 
-function singleClick() {
-  console.log('sgclick');
-}
-
 function getTimeStamp() {
   let now = new Date();
 
