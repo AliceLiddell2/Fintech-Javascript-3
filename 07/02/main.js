@@ -17,10 +17,10 @@ function doubleClick(timeDate) {
   list.appendChild(newLi);
 }
 
-testButton.addEventListener('click', function() {
+testButton.addEventListener('click', () => {
   clickCount++;
   if (clickCount === 1) {
-    singleClickTimer = setTimeout(function() {
+    singleClickTimer = setTimeout(() => {
       clickCount = 0;
     }, 1000);
   } else if (clickCount === 2) {
