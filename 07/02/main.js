@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+
 const testButton = document.getElementById('test-button');
 const list = document.getElementById('list');
 let time;
