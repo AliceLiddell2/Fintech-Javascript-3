@@ -41,6 +41,9 @@ function checkInfiniteScroll(parentSelector, childSelector) {
         getJson(k);
         k += 1;
       }
+      else {
+        return 0;
+      }
       document.querySelector(parentSelector).appendChild(newDiv);
     }
     checkInfiniteScroll(parentSelector, childSelector);
