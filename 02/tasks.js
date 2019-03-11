@@ -4,9 +4,7 @@
  */
 function timer(logger = console.log) {
   for (var i = 0; i < 10; i++) {
-    setTimeout(() => {
-      logger(i);
-    }, 100);
+    (function(index) { setTimeout(() => { logger(index); }, 100); }(i));
   }
 }
 
@@ -20,7 +18,9 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-
+  return function(...argsForSecondFunction) {
+    return func.apply(context, args.concat(argsForSecondFunction));
+  };
 }
 
 /*= ============================================ */
@@ -32,8 +32,8 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(x) {
-  return 0;
+function sum(firstNum) {
+  return (firstNum === undefined) ? 0 : secNum => secNum === undefined ? firstNum : sum(firstNum + secNum);
 }
 
 /*= ============================================ */
@@ -45,7 +45,19 @@ function sum(x) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+  if (first.length !== second.length) {
+    return false;
+  }
+  const firstStringCharCounter = {};
+
+  [].forEach.call(first, char => firstStringCharCounter[char] = firstStringCharCounter[char] ? 1 + firstStringCharCounter[char] : 1);
+  for (let charSec of second) {
+    if (!firstStringCharCounter[charSec]) {
+      return false;
+    }
+    firstStringCharCounter[charSec] -= 1;
+  }
+  return true;
 }
 
 /*= ============================================ */
@@ -56,8 +68,10 @@ function anagram(first, second) {
  * @param {Array<number>} исходный массив
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getUnique(arr) {
-  return [];
+function getUnique(mass) {
+  const uniqueArray = [...new Set(mass)];
+
+  return uniqueArray.sort((first, second) => first - second);
 }
 
 /**
@@ -67,7 +81,20 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  return [];
+  let cache = {};
+  let result = [];
+
+  first.forEach(element => cache[element] > 0 ? cache[element] += 1 : cache[element] = 1);
+
+  second.forEach(element => {
+    if (cache[element] !== undefined) {
+      if (cache[element] > 0) {
+        result.push(element);
+        cache[element] -= 1;
+      }
+    }
+  });
+  return result.sort((first, second) => first - second);
 }
 
 /* ============================================= */
@@ -86,7 +113,20 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  if (left.length !== right.length) {
+    return false;
+  }
+  let countChanges = 0;
 
+  for (let i = 0; i < left.length; i++) {
+    if (left[i] !== right[i]) {
+      countChanges += 1;
+    }
+    if (countChanges > 1) {
+      return false;
+    }
+  }
+  return true;
 }
 
 module.exports = {
